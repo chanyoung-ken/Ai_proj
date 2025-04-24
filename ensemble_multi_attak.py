@@ -190,8 +190,6 @@ def train_at_alp(
         robust_acc = benchmark_evaluate(model, device, test_loader,
                                         attack=benchmark_pgd_attack, # Use benchmark's PGD
                                         attack_name=f'PGD_Eval(i={eval_attack_iters})', # Naming convention
-                                        # Pass PGD parameters expected by benchmark_pgd_attack
-                                        criterion=criterion_eval, # benchmark PGD needs criterion
                                         epsilon=eval_attack_eps,
                                         alpha=eval_attack_alpha,
                                         iters=eval_attack_iters
