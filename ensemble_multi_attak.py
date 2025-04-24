@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import time
+from typing import List, Dict, Optional
 
 # --- Import from benchmark.py --- 
 # Make sure benchmark.py is in the Python path or the same directory
@@ -220,8 +221,8 @@ def train_at_alp(
 
     return model, best_robust_acc, total_time
 
-# --- Ensemble Prediction Function (Mostly Unchanged, uses loaded models) ---
-def ensemble_predict(models: list[nn.Module], device: torch.device, loader: DataLoader, return_logits: bool = True):
+# --- Ensemble Prediction Function (Fix type hints) ---
+def ensemble_predict(models: List[nn.Module], device: torch.device, loader: DataLoader, return_logits: bool = True):
     """
     Performs inference using an ensemble of models by averaging their logits or probabilities.
     (Keep this function as is, it operates on loaded model objects)
@@ -264,9 +265,9 @@ def ensemble_predict(models: list[nn.Module], device: torch.device, loader: Data
         return final_preds, all_labels_cat
 
 
-# --- Ensemble Robustness Evaluation (Uses benchmark functions) ---
+# --- Ensemble Robustness Evaluation (Fix type hints) ---
 def evaluate_robustness_ensemble(
-    model_paths: list[str],
+    model_paths: List[str],
     base_arch: str,
     num_classes: int,
     device: torch.device,
