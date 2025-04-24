@@ -10,3 +10,10 @@
 2025-04-22 12:43:10: Starting hyperparameter search...
 2025-04-22 13:16:43: Hyperparameter search completed.
 2025-04-22 13:16:43: Starting benchmark...
+Starting ensemble multi-attack script in the background...
+Python executable: /opt/conda/bin/python
+Python script: Ai_proj/ensemble_multi_attak.py
+Output will be logged to: Ai_proj/ensemble_output.log
+Script started in background with PID: 9914
+You can monitor the output using: tail -f Ai_proj/ensemble_output.log
+Check process status using: ps -p 9914
