@@ -159,8 +159,8 @@ def train_at_alp(
             # Optimization step
             optimizer.zero_grad()
             total_loss.backward()
-            # Optional: Gradient clipping if needed
-            # torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            # --- 추가: Gradient Clipping --- 
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0) # max_norm 값은 조절 가능
             optimizer.step()
 
             total_loss_accum += total_loss.item()
