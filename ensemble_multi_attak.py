@@ -149,7 +149,7 @@ def train_at_alp(
             images, labels = images.to(device), labels.to(device)
 
             # Compute AT+ALP loss using alp_pgd_attack internally
-            attack_kwargs = {'epsilon': attack_eps, 'alpha': attack_alpha, 'iters': attack_iters}
+            attack_kwargs = {'eps': attack_eps, 'alpha': attack_alpha, 'iters': attack_iters}
             total_loss, loss_ce, loss_alp, loss_at = compute_at_alp_loss(
                 model, feature_extractor, images, labels,
                 alpha=alpha_alp, beta=beta_at,
