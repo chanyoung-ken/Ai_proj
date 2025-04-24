@@ -1,0 +1,559 @@
+2025-04-22 09:43:54: Starting hyperparameter search...
+ 
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.8981
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.8522
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.8887
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.8375
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.8758
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.7718
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.9017
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.8444
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.9007
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.8359
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.8792
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.7822
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.8738
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.8554
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.8962
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.8043
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.9053
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.7774
+[HPO] CIFAR10 START|batch_size=64,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.8901
+[HPO] CIFAR10 START|batch_size=64,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.8054
+[HPO] CIFAR10 START|batch_size=128,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.8802
+[HPO] CIFAR10 START|batch_size=128,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.8226
+[HPO] CIFAR10 START|batch_size=256,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.8466
+[HPO] CIFAR10 START|batch_size=256,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.7586
+[HPO] CIFAR10 START|batch_size=64,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.8965
+[HPO] CIFAR10 START|batch_size=64,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.8291
+[HPO] CIFAR10 START|batch_size=128,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.8957
+[HPO] CIFAR10 START|batch_size=128,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.7763
+[HPO] CIFAR10 START|batch_size=256,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.8668
+[HPO] CIFAR10 START|batch_size=256,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.7372
+[HPO] CIFAR10 START|batch_size=64,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.8143
+[HPO] CIFAR10 START|batch_size=64,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.8547
+[HPO] CIFAR10 START|batch_size=128,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.8686
+[HPO] CIFAR10 START|batch_size=128,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.8103
+[HPO] CIFAR10 START|batch_size=256,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.8759
+[HPO] CIFAR10 START|batch_size=256,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.7998
+[HPO] CIFAR10 START|batch_size=64,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.8814
+[HPO] CIFAR10 START|batch_size=64,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.8234
+[HPO] CIFAR10 START|batch_size=128,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.8674
+[HPO] CIFAR10 START|batch_size=128,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.7674
+[HPO] CIFAR10 START|batch_size=256,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.8054
+[HPO] CIFAR10 START|batch_size=256,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.6961
+[HPO] CIFAR10 START|batch_size=64,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.8683
+[HPO] CIFAR10 START|batch_size=64,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.8143
+[HPO] CIFAR10 START|batch_size=128,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.8768
+[HPO] CIFAR10 START|batch_size=128,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.8032
+[HPO] CIFAR10 START|batch_size=256,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.8657
+[HPO] CIFAR10 START|batch_size=256,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.6902
+[HPO] CIFAR10 START|batch_size=64,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.6193
+[HPO] CIFAR10 START|batch_size=64,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.8105
+[HPO] CIFAR10 START|batch_size=128,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.8104
+[HPO] CIFAR10 START|batch_size=128,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.8387
+[HPO] CIFAR10 START|batch_size=256,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.8537
+[HPO] CIFAR10 START|batch_size=256,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.8078
+[HPO] CIFAR10 완료: best_acc=0.9053, lr=0.05, wd=0.005
+
+ 
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.6768
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.3000
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.6465
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.3346
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.6091
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.0005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-04 -> Test Acc: 0.3274
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.6845
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.3455
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.6607
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.3703
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.6232
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  lr=5.0e-02, wd=1.0e-03 -> Test Acc: 0.3803
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.5933
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.3467
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.6529
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.3691
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.6521
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  lr=5.0e-02, wd=5.0e-03 -> Test Acc: 0.3775
+[HPO] CIFAR100 START|batch_size=64,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.6785
+[HPO] CIFAR100 START|batch_size=64,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.2183
+[HPO] CIFAR100 START|batch_size=128,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.6601
+[HPO] CIFAR100 START|batch_size=128,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.2312
+[HPO] CIFAR100 START|batch_size=256,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.6342
+[HPO] CIFAR100 START|batch_size=256,lr=0.1, wd=0.0005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-04 -> Test Acc: 0.2307
+[HPO] CIFAR100 START|batch_size=64,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.6710
+[HPO] CIFAR100 START|batch_size=64,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.0100
+[HPO] CIFAR100 START|batch_size=128,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.6673
+[HPO] CIFAR100 START|batch_size=128,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.2436
+[HPO] CIFAR100 START|batch_size=256,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.6438
+[HPO] CIFAR100 START|batch_size=256,lr=0.1, wd=0.001
+ 
+ 
+  lr=1.0e-01, wd=1.0e-03 -> Test Acc: 0.2043
+[HPO] CIFAR100 START|batch_size=64,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.4062
+[HPO] CIFAR100 START|batch_size=64,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.1055
+[HPO] CIFAR100 START|batch_size=128,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.5918
+[HPO] CIFAR100 START|batch_size=128,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.2096
+[HPO] CIFAR100 START|batch_size=256,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.6392
+[HPO] CIFAR100 START|batch_size=256,lr=0.1, wd=0.005
+ 
+ 
+  lr=1.0e-01, wd=5.0e-03 -> Test Acc: 0.2229
+[HPO] CIFAR100 START|batch_size=64,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.6175
+[HPO] CIFAR100 START|batch_size=64,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.0100
+[HPO] CIFAR100 START|batch_size=128,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.6584
+[HPO] CIFAR100 START|batch_size=128,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.1076
+[HPO] CIFAR100 START|batch_size=256,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.6461
+[HPO] CIFAR100 START|batch_size=256,lr=0.2, wd=0.0005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-04 -> Test Acc: 0.1456
+[HPO] CIFAR100 START|batch_size=64,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.6103
+[HPO] CIFAR100 START|batch_size=64,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.0977
+[HPO] CIFAR100 START|batch_size=128,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.6470
+[HPO] CIFAR100 START|batch_size=128,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.0417
+[HPO] CIFAR100 START|batch_size=256,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.6659
+[HPO] CIFAR100 START|batch_size=256,lr=0.2, wd=0.001
+ 
+ 
+  lr=2.0e-01, wd=1.0e-03 -> Test Acc: 0.2612
+[HPO] CIFAR100 START|batch_size=64,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.2013
+[HPO] CIFAR100 START|batch_size=64,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.0733
+[HPO] CIFAR100 START|batch_size=128,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.3562
+[HPO] CIFAR100 START|batch_size=128,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.1896
+[HPO] CIFAR100 START|batch_size=256,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.5269
+[HPO] CIFAR100 START|batch_size=256,lr=0.2, wd=0.005
+ 
+ 
+  lr=2.0e-01, wd=5.0e-03 -> Test Acc: 0.2265
+[HPO] CIFAR100 완료: best_acc=0.6845, lr=0.05, wd=0.001
+
+HPO 결과가 'best_hyperparams.json' 에 저장되었습니다.
+2025-04-22 12:14:09: Hyperparameter search completed.
+2025-04-22 12:14:09: Starting benchmark...
+[BENCHMARK] Dataset: CIFAR10, LR=0.05, WeightDecay=0.005
+ 
+ 
+Dataset: CIFAR10, Number of classes: 10, Epochs: 20
+--- Training baseline ResNet on CIFAR10 ---
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:220: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "benchmark.py", line 433, in <module>
+    main()
+  File "benchmark.py", line 348, in main
+    base_model, base_acc, base_time = train_final_model(base_model, device, train_loader, test_loader, FINAL_EPOCHS, lr, wd, OPTIMIZER_TYPE, model_name="BaselineResNet", dataset_name=ds_name)
+NameError: name 'OPTIMIZER_TYPE' is not defined
+2025-04-22 12:43:10: Starting hyperparameter search...
+ 
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  bs=64, opt=SGD, lr=0.0500, wd=0.0050 -> Test Acc: 0.8680
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  bs=64, opt=AdamW, lr=0.0500, wd=0.0050 -> Test Acc: 0.8581
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  bs=128, opt=SGD, lr=0.0500, wd=0.0050 -> Test Acc: 0.8972
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  bs=128, opt=AdamW, lr=0.0500, wd=0.0050 -> Test Acc: 0.8512
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  bs=256, opt=SGD, lr=0.0500, wd=0.0050 -> Test Acc: 0.9045
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  bs=256, opt=AdamW, lr=0.0500, wd=0.0050 -> Test Acc: 0.7289
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  bs=64, opt=SGD, lr=0.0500, wd=0.0010 -> Test Acc: 0.9036
+[HPO] CIFAR10 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  bs=64, opt=AdamW, lr=0.0500, wd=0.0010 -> Test Acc: 0.8578
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  bs=128, opt=SGD, lr=0.0500, wd=0.0010 -> Test Acc: 0.9014
+[HPO] CIFAR10 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  bs=128, opt=AdamW, lr=0.0500, wd=0.0010 -> Test Acc: 0.8421
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  bs=256, opt=SGD, lr=0.0500, wd=0.0010 -> Test Acc: 0.8837
+[HPO] CIFAR10 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  bs=256, opt=AdamW, lr=0.0500, wd=0.0010 -> Test Acc: 0.7785
+ 
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  bs=64, opt=SGD, lr=0.0500, wd=0.0050 -> Test Acc: 0.5958
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.005
+ 
+ 
+  bs=64, opt=AdamW, lr=0.0500, wd=0.0050 -> Test Acc: 0.2633
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  bs=128, opt=SGD, lr=0.0500, wd=0.0050 -> Test Acc: 0.6536
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.005
+ 
+ 
+  bs=128, opt=AdamW, lr=0.0500, wd=0.0050 -> Test Acc: 0.3699
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  bs=256, opt=SGD, lr=0.0500, wd=0.0050 -> Test Acc: 0.6608
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.005
+ 
+ 
+  bs=256, opt=AdamW, lr=0.0500, wd=0.0050 -> Test Acc: 0.4420
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  bs=64, opt=SGD, lr=0.0500, wd=0.0010 -> Test Acc: 0.6845
+[HPO] CIFAR100 START|batch_size=64,lr=0.05, wd=0.001
+ 
+ 
+  bs=64, opt=AdamW, lr=0.0500, wd=0.0010 -> Test Acc: 0.2674
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  bs=128, opt=SGD, lr=0.0500, wd=0.0010 -> Test Acc: 0.6618
+[HPO] CIFAR100 START|batch_size=128,lr=0.05, wd=0.001
+ 
+ 
+  bs=128, opt=AdamW, lr=0.0500, wd=0.0010 -> Test Acc: 0.4155
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  bs=256, opt=SGD, lr=0.0500, wd=0.0010 -> Test Acc: 0.6199
+[HPO] CIFAR100 START|batch_size=256,lr=0.05, wd=0.001
+ 
+ 
+  bs=256, opt=AdamW, lr=0.0500, wd=0.0010 -> Test Acc: 0.3623
+[HPO] CIFAR100 완료: best_acc=0.6845, lr=0.05, wd=0.001, bs=64, opt=SGD
+HPO 결과가 'best_hyperparams.json' 에 저장되었습니다.
+2025-04-22 13:16:43: Hyperparameter search completed.
