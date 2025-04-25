@@ -41,14 +41,14 @@ except Exception as e:
 from attentionlpt import FeatureExtractor, compute_at_alp_loss, pgd_attack as alp_pgd_attack # Keep AT+ALP specific PGD
 
 # --- Configuration (Adjust as needed) ---
-CONFIG_FILE = 'best_hyperparams.json' # Benchmark config for LR/WD
+CONFIG_FILE = '/home/work/AIprogramming/Ai_proj/best_hyperparams.json' # Benchmark config for LR/WD
 DATASETS = ['CIFAR10'] # Focus dataset
 # DATA_DIR is likely handled by get_data_loader from benchmark
 BATCH_SIZE = 128
 EPOCHS_AT_ALP = 50 # Epochs for AT+ALP training
 USE_SUBSET = False # Set to True for faster testing (uses benchmark's SUBSET_SIZE if defined there, else needs definition)
 # SUBSET_SIZE = 1000 # Define if benchmark doesn't expose it and USE_SUBSET is True
-RESULTS_DIR = 'robustness_results' # Dir for benchmark models and saving results
+RESULTS_DIR = '/home/work/AIprogramming/Ai_proj/robustness_results' # Dir for benchmark models and saving results
 ENSEMBLE_MODEL_DIR = '/home/work/AIprogramming/Ai_proj/ensemble_models' # Dir for AT+ALP trained models
 BASE_MODEL_ARCH = 'resnet18'
 OPTIMIZER_TYPE = 'SGD' # Default optimizer type
