@@ -1,5 +1,4 @@
-Model,Type,CleanAccuracy,FGSM_eps=0.01,FGSM_eps=0.03,FGSM_eps=0.05,FGSM_eps=0.07,FGSM_eps=0.10,PGD_iters=7_eps0.031,PGD_iters=10_eps0.031,PGD_iters=20_eps0.031
-Ensemble,Ensemble,0.9311,0.8212,0.8049,0.7905,0.7812,0.7698,0.6467,0.6344,0.6286
-CIFAR10_baseline_resnet,Individual,0.9484,0.5043,0.4603,0.4236,0.3944,0.3618,0.1497,0.1379,0.1275
-CIFAR10_adv_resnet,Individual,0.1229,0.8576,0.8559,0.8549,0.8514,0.8482,0.7277,0.7241,0.7224
-CIFAR10_at_alp_resnet18_pgd7,Individual,0.5754,0.5546,0.5137,0.4752,0.4415,0.387,0.5062,0.5062,0.5061
+Model,Type,CleanAccuracy,FGSM_eps=0.01,FGSM_eps=0.03,FGSM_eps=0.05,FGSM_eps=0.07,FGSM_eps=0.10,PGD_iters=7_eps0.250,PGD_iters=10_eps0.250,PGD_iters=20_eps0.250
+Ensemble,Ensemble,0.436,0.8505,0.8488,0.8473,0.8449,0.8433,0.5831,0.4916,0.2916
+CIFAR10_adv_resnet,Individual,0.1229,0.8576,0.8559,0.8549,0.8514,0.8482,0.558,0.4569,0.2543
+CIFAR10_at_alp_resnet18_pgd7,Individual,0.5754,0.5546,0.5137,0.4752,0.4415,0.387,0.4389,0.3829,0.2352

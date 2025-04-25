@@ -105,11 +105,11 @@ def plot_robustness(csv_path: str, save_dir: str = None):
     if save_dir:
         import os
         os.makedirs(save_dir, exist_ok=True)
-        pgd_fname = os.path.join(save_dir, 'ensemble_pgd_robustness.png')
+        pgd_fname = os.path.join(save_dir, '3ensemble_pgd_robustness.png')
         plt.sca(axes[0,0])
         plt.savefig(pgd_fname, dpi=300, bbox_inches='tight')
         if fgsm_cols_sorted:
-            fgsm_fname = os.path.join(save_dir, 'ensemble_fgsm_robustness.png')
+            fgsm_fname = os.path.join(save_dir, '3ensemble_fgsm_robustness.png')
             plt.sca(axes[0,1])
             plt.savefig(fgsm_fname, dpi=300, bbox_inches='tight')
         print(f"Saved plots to {save_dir}")
@@ -119,6 +119,6 @@ def plot_robustness(csv_path: str, save_dir: str = None):
 
 if __name__ == '__main__':
     # Example usage
-    csv_file = '/home/work/AIprogramming/Ai_proj/robustness_results/CIFAR10_all_ensemble_robustness_summary_compat.csv'
+    csv_file = '/home/work/AIprogramming/Ai_proj/robustness_results/CIFAR10_ensemble_robustness_summary_compat.csv'
     out_dir = '/home/work/AIprogramming/Ai_proj/graphs'
     plot_robustness(csv_file, save_dir=out_dir)

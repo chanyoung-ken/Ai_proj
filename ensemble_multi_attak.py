@@ -490,7 +490,7 @@ if __name__ == '__main__':
     # --- Option 2: Define list of models for ensemble ---
     model_paths_for_ensemble = [
         # Paths from benchmark results (ensure filenames match benchmark's saving format)
-        os.path.join(RESULTS_DIR, f"{dataset_name}_baseline_resnet.pth"),
+        # os.path.join(RESULTS_DIR, f"{dataset_name}_baseline_resnet.pth"),
         os.path.join(RESULTS_DIR, f"{dataset_name}_resnet_cbam.pth"), # Uncomment to include
         os.path.join(RESULTS_DIR, f"{dataset_name}_resnet_se.pth"),   # Uncomment to include
         os.path.join(RESULTS_DIR, f"{dataset_name}_adv_resnet.pth"),
