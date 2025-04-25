@@ -65,8 +65,8 @@ ADV_ITERS_TRAIN = 7
 
 # Evaluation attack parameters (using benchmark's style)
 # These might be defined in benchmark.py, check there or redefine
-ADV_EPS_EVAL = 8/255
-ADV_ALPHA_EVAL = 2/255
+ADV_EPS_EVAL = 0.25  # <-- 8/255 에서 0.25로 변경
+ADV_ALPHA_EVAL = 2/255 # Alpha 값은 일단 유지 (필요시 조정 가능)
 ADV_ITERS_EVAL = [7, 10, 20] # Test different PGD strengths for eval
 FGSM_EPS_EVAL = [0.01, 0.03, 0.05, 0.07, 0.1] # Test different FGSM strengths
 
