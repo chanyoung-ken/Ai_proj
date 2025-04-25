@@ -386,7 +386,6 @@ def evaluate_robustness_ensemble(
             fgsm_acc_ind = benchmark_evaluate(model, device, test_loader,
                                               attack=benchmark_fgsm_attack,
                                               attack_name=f'FGSM (eps={eps_f:.2f})',
-                                              criterion=criterion,
                                               epsilon=eps_f)
             results[name]['FGSM'][f"eps={eps_f:.2f}"] = fgsm_acc_ind
 
