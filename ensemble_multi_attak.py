@@ -418,7 +418,7 @@ def evaluate_robustness_ensemble(
             row[f'PGD_{k}_eps{ADV_EPS_EVAL:.3f}'] = v # Make PGD column name clearer
         df_data.append(row)
     df_results = pd.DataFrame(df_data)
-    results_filename = os.path.join(results_save_dir, f"{dataset_name}_ensemble_robustness_summary_compat.csv") # New name
+    results_filename = os.path.join(results_save_dir, f"{dataset_name}_all_ensemble_robustness_summary_compat.csv") # New name
     df_results.to_csv(results_filename, index=False)
     print(f"Evaluation results saved to {results_filename}")
 
@@ -491,8 +491,8 @@ if __name__ == '__main__':
     model_paths_for_ensemble = [
         # Paths from benchmark results (ensure filenames match benchmark's saving format)
         os.path.join(RESULTS_DIR, f"{dataset_name}_baseline_resnet.pth"),
-        # os.path.join(RESULTS_DIR, f"{dataset_name}_resnet_cbam.pth"), # Uncomment to include
-        # os.path.join(RESULTS_DIR, f"{dataset_name}_resnet_se.pth"),   # Uncomment to include
+        os.path.join(RESULTS_DIR, f"{dataset_name}_resnet_cbam.pth"), # Uncomment to include
+        os.path.join(RESULTS_DIR, f"{dataset_name}_resnet_se.pth"),   # Uncomment to include
         os.path.join(RESULTS_DIR, f"{dataset_name}_adv_resnet.pth"),
         at_alp_model_path # Include the AT+ALP trained model
     ]
