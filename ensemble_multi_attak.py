@@ -397,7 +397,6 @@ def evaluate_robustness_ensemble(
             pgd_acc_ind = benchmark_evaluate(model, device, test_loader,
                                              attack=benchmark_pgd_attack,
                                              attack_name=f'PGD (iters={iters_p})',
-                                             criterion=criterion,
                                              epsilon=eps_p,
                                              alpha=alpha_p,
                                              iters=iters_p)
