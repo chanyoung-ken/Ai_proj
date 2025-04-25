@@ -49,7 +49,7 @@ EPOCHS_AT_ALP = 50 # Epochs for AT+ALP training
 USE_SUBSET = False # Set to True for faster testing (uses benchmark's SUBSET_SIZE if defined there, else needs definition)
 # SUBSET_SIZE = 1000 # Define if benchmark doesn't expose it and USE_SUBSET is True
 RESULTS_DIR = 'robustness_results' # Dir for benchmark models and saving results
-ENSEMBLE_MODEL_DIR = 'ensemble_models' # Dir for AT+ALP trained models
+ENSEMBLE_MODEL_DIR = '/home/work/AIprogramming/Ai_proj/ensemble_models' # Dir for AT+ALP trained models
 BASE_MODEL_ARCH = 'resnet18'
 OPTIMIZER_TYPE = 'SGD' # Default optimizer type
 
@@ -474,7 +474,7 @@ if __name__ == '__main__':
          lr, wd, opt_type = 0.01, 5e-4, OPTIMIZER_TYPE
 
     # Run AT+ALP training
-    TRAIN_NEW_MODEL = True # Set to False to skip training if model exists
+    TRAIN_NEW_MODEL = False # Set to False to skip training if model exists
     if TRAIN_NEW_MODEL or not os.path.exists(at_alp_model_path):
         print(f"Starting AT+ALP training for {at_alp_model_filename}...")
         # Pass evaluation attack parameters for the eval step within training
