@@ -156,16 +156,21 @@ def compute_at_alp_loss(
 
     # 2) Forward pass for both clean and adversarial examples
     model.eval() # Ensure eval mode for consistent feature extraction if BN/Dropout are used
+    
     # Clean forward pass
-    _ = model(x) # Run forward pass to populate hooks
-    feats_clean = feature_extractor.get_features()
-    logits_clean = model(x) # Get clean logits
+    logits_clean = model(x) # Run forward pass, populates hooks AND gets logits
+    # --- 수정: 특징을 즉시 복사 ---
+    feats_clean = {k: v.clone().detach() if v is not None else None 
+                   for k, v in feature_extractor.get_features().items()}
+    # --------------------------
     
     # Adversarial forward pass
-    _ = model(x_adv) # Run forward pass to populate hooks
-    feats_adv = feature_extractor.get_features()
-    logits_adv = model(x_adv) # Get adversarial logits
-    
+    logits_adv = model(x_adv) # Run forward pass, populates hooks AND gets logits
+    # --- 수정: 특징을 즉시 복사 ---
+    feats_adv = {k: v.clone().detach() if v is not None else None 
+                 for k, v in feature_extractor.get_features().items()}
+    # --------------------------
+
     model.train(original_mode) # Restore training mode after forward passes if needed
 
     # Check if features were extracted correctly
