@@ -285,11 +285,15 @@ for epoch in range(1, EPOCHS+1):
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         optimizer.step()
 
+        # --- 추가 디버깅 --- 
+        print(f"[DEBUG] Raw loss values: CE={ce_loss.item():.6f}, LP={alp_loss.item():.6f}, AT={at_loss.item():.6f}")
+        # -------------------
+        
         pbar.set_postfix({
             'Total': f"{total_loss.item():.3f}",
             'CE': f"{ce_loss.item():.3f}",
-            'LP': f"{alp_loss.item():.3f}",
-            'AT': f"{at_loss.item():.3f}"  
+            'LP': f"{alp_loss.item():.6f}", # 소수점 6자리로 변경
+            'AT': f"{at_loss.item():.3f}"
         })
 
     scheduler.step()

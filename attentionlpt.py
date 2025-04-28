@@ -203,6 +203,7 @@ def compute_at_alp_loss(
     # 4) Adversarial Logit Pairing (ALP) Loss
     loss_alp = F.mse_loss(logits_clean, logits_adv)
     # --- 추가 디버깅 --- 
+    print(f"[DEBUG][compute_at_alp_loss] Calculated loss_alp: {loss_alp.item():.10f}") # Print immediately after calculation
     logit_diff = (logits_clean - logits_adv).abs().sum().item()
     print(f"[DEBUG] Difference between logits_clean and logits_adv: {logit_diff:.4f}")
     # -------------------
@@ -247,5 +248,8 @@ def compute_at_alp_loss(
 
     # 6) Combine losses
     total_loss = loss_ce + alpha * loss_alp + beta * loss_at
-
+    
+    # --- 추가 디버깅 ---
+    print(f"[DEBUG][compute_at_alp_loss] Returning losses - CE: {loss_ce.item():.6f}, LP: {loss_alp.item():.10f}, AT: {loss_at.item():.6f}") # Print just before return
+    # -------------------
     return total_loss, loss_ce, loss_alp, loss_at
