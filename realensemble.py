@@ -286,13 +286,13 @@ for epoch in range(1, EPOCHS+1):
         optimizer.step()
 
         # --- 추가 디버깅 --- 
-        print(f"[DEBUG] Raw loss values: CE={ce_loss.item():.6f}, LP={alp_loss.item():.6f}, AT={at_loss.item():.6f}")
+        print(f"[DEBUG] Raw loss values: CE={ce_loss.item():.6f}, LP={alp_loss.item():.10f}, AT={at_loss.item():.6f}") # LP 정밀도 높임
         # -------------------
         
         pbar.set_postfix({
             'Total': f"{total_loss.item():.3f}",
             'CE': f"{ce_loss.item():.3f}",
-            'LP': f"{alp_loss.item():.6f}", # 소수점 6자리로 변경
+            'LP': f"{alp_loss.item():.10f}", # 소수점 10자리로 변경
             'AT': f"{at_loss.item():.3f}"
         })
 
