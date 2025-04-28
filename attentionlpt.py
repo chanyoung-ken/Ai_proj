@@ -147,6 +147,13 @@ def compute_at_alp_loss(
     model.train(original_mode) # Restore original mode
     x_adv = x_adv.detach() # Ensure gradients don't flow back through attack generation
 
+    # --- 디버깅 코드 추가 ---
+    diff = (x_adv - x).abs().sum().item()
+    print(f"[DEBUG] Difference between x_adv and x: {diff:.4f}")
+    if diff == 0:
+        print("[DEBUG] Warning: PGD attack did not modify the input!")
+    # --- 디버깅 코드 끝 ---
+
     # 2) Forward pass for both clean and adversarial examples
     model.eval() # Ensure eval mode for consistent feature extraction if BN/Dropout are used
     # Clean forward pass
