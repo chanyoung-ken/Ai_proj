@@ -2,6 +2,7 @@ import json
 import os
 import time
 import copy
+import argparse
 
 import torch
 import torch.nn as nn
@@ -168,6 +169,16 @@ class ResNet18MultiAttention(nn.Module):
 # --------------------
 # Hyperparameters (Load from JSON)
 # --------------------
+def parse_args():
+    parser = argparse.ArgumentParser(description='Train ResNet18 with AT+ALP on CIFAR10')
+    parser.add_argument('--adv_eps', type=float, default=8/255, 
+                        help='PGD attack epsilon for training (default: 8/255)')
+    parser.add_argument('--epochs', type=int, default=50, 
+                        help='Number of training epochs (default: 50)')
+    return parser.parse_args()
+
+args = parse_args()
+
 try:
     with open('best_hyperparams.json', 'r') as f:
         loaded_hp = json.load(f)
@@ -176,7 +187,6 @@ try:
     print("Loaded hyperparameters from best_hyperparams.json")
 except FileNotFoundError:
     print("Warning: best_hyperparams.json not found. Using default values.")
-    # Fallback to default values if JSON is missing (optional, adjust as needed)
     hp = {
         "lr": 0.05,
         "wd": 0.005,
@@ -198,11 +208,11 @@ BATCH_SIZE = hp.get("bs", 256) # Provide default if key missing
 LR = hp.get("lr", 0.05)
 WEIGHT_DECAY = hp.get("wd", 0.005)
 OPTIMIZER = hp.get("opt", "SGD").upper() # 'SGD' or 'ADAMW'
-EPOCHS = 50 # Keep EPOCHS or load if it's in JSON
+EPOCHS = args.epochs
 
 # PGD attack settings for training
-ADV_EPS = 8/255
-ADV_ALPHA = 2/255
+ADV_EPS = args.adv_eps
+ADV_ALPHA = ADV_EPS / 4
 ADV_ITERS = 7
 
 # Attention pairing weights
@@ -331,7 +341,9 @@ for epoch in range(1, EPOCHS+1):
 # --------------------
 model.load_state_dict(best_weights)
 os.makedirs('saved_models', exist_ok=True)
-model_path = os.path.join('saved_models', 'cifar10_at_alp_resnet18.pth')
+eps_str = f"eps{ADV_EPS:.4f}".replace('.', '_')
+model_filename = f'cifar10_at_alp_resnet18_{eps_str}.pth'
+model_path = os.path.join('saved_models', model_filename)
 torch.save(model.state_dict(), model_path)
 print(f"Best robust acc: {best_robust_acc:.4f}, model saved to {model_path}")
 print(f"Total training time: {time.time() - start_time:.1f}s")
