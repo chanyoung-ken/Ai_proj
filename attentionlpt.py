@@ -197,6 +197,10 @@ def compute_at_alp_loss(
 
     # 4) Adversarial Logit Pairing (ALP) Loss
     loss_alp = F.mse_loss(logits_clean, logits_adv)
+    # --- 추가 디버깅 --- 
+    logit_diff = (logits_clean - logits_adv).abs().sum().item()
+    print(f"[DEBUG] Difference between logits_clean and logits_adv: {logit_diff:.4f}")
+    # -------------------
 
     # 5) Attention Map Pairing (AT) Loss
     loss_at = torch.tensor(0.0, device=x.device, dtype=x.dtype)
@@ -227,7 +231,14 @@ def compute_at_alp_loss(
         vec_a_normalized = vec_a / (norm_a + eps)
 
         # 5.3) Compute pairwise L2 distance (MSE Loss) between normalized vectors
-        loss_at += F.mse_loss(vec_c_normalized, vec_a_normalized)
+        current_at_loss = F.mse_loss(vec_c_normalized, vec_a_normalized)
+        # --- 추가 디버깅 (layer1만 확인) --- 
+        if name == layer_names_to_use[0]: # 첫번째 레이어만 확인
+            feat_diff = (a_c - a_a).abs().sum().item()
+            norm_vec_diff = (vec_c_normalized - vec_a_normalized).abs().sum().item()
+            print(f"[DEBUG] Layer '{name}': Feat Diff: {feat_diff:.4f}, NormVec Diff: {norm_vec_diff:.4f}, Current AT Loss: {current_at_loss.item():.4f}")
+        # --------------------------------
+        loss_at += current_at_loss
 
     # 6) Combine losses
     total_loss = loss_ce + alpha * loss_alp + beta * loss_at
