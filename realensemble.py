@@ -299,8 +299,16 @@ for epoch in range(1, EPOCHS+1):
     correct, total = 0, 0
     for images, labels in test_loader:
         images, labels = images.to(device), labels.to(device)
-        adv_images = alp_pgd_attack(model, nn.CrossEntropyLoss(), images, labels,
-                                     epsilon=ADV_EPS, alpha=ADV_ALPHA, iters=ADV_ITERS)
+        adv_images = alp_pgd_attack(
+            model,                # 1) model
+            nn.CrossEntropyLoss(),# 2) loss function
+            images,               # 3) 원본 이미지
+            labels,               # 4) 레이블
+            ADV_EPS,              # 5) eps (PGD 엡실론)
+            ADV_ALPHA,            # 6) alpha (스텝 크기)
+            ADV_ITERS,            # 7) iters (반복 횟수)
+            device                # 8) device (옵션)
+        )
         with torch.no_grad():
             outputs = model(adv_images)
             preds = outputs.argmax(dim=1)
