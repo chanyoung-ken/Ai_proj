@@ -10,58 +10,52 @@ from typing import List, Dict, Tuple, Optional
 import torch
 import torch.nn.functional as F
 
-def pgd_attack(model, x, y,
-               eps: float = 0.3,
-               alpha: float = 0.01,
-               iters: int = 40,
-               random_start: bool = True,
-               clamp_min: float = 0.0,
-               clamp_max: float = 1.0):
-    """
-    Projected Gradient Descent (L_inf) 공격
-    Args:
-        model:          PyTorch 모델 (평가 모드여야 함: model.eval())
-        x:              원본 입력 텐서, shape (N,C,H,W), requires_grad=False
-        y:              정답 레이블 텐서, shape (N,)
-        eps:            최대 교란 크기 (L_inf norm bound)
-        alpha:          한 스텝당 이동 크기 (step size)
-        iters:          반복 횟수
-        random_start:   True면 처음에 [-eps, +eps] 랜덤 초기화
-        clamp_min:      입력 최소값 (예: 0.0)
-        clamp_max:      입력 최대값 (예: 1.0)
-    Returns:
-        x_adv:          교란을 입힌 적대적 예제, 원본과 같은 shape
-    """
-    # 0) 안전을 위해 모델을 평가 모드로 전환
+def pgd_attack_l2(model, x, y,
+                  eps: float=1.0,      # L2 반경
+                  alpha: float=0.1,    # 한 스텝 크기
+                  iters: int=40,
+                  random_start: bool=True,
+                  clamp_min: float=0.0,
+                  clamp_max: float=1.0):
     model.eval()
-
-    # 1) 교란을 저장할 텐서 생성
     x_adv = x.clone().detach()
-
-    # 2) 랜덤 스타트: [-eps, +eps] 구간 랜덤 초기화
+    
+    # 1) 랜덤 스타트: L2‐ball uniform
     if random_start:
-        delta = torch.empty_like(x_adv).uniform_(-eps, eps)
+        delta = torch.randn_like(x_adv)
+        delta_norm = delta.view(delta.size(0), -1).norm(p=2, dim=1)
+        # unit vector
+        delta = delta / (delta_norm.view(-1,1,1,1) + 1e-12)
+        # 반경 eps 내로 scaling
+        u = torch.rand(delta.size(0), device=x.device).view(-1,1,1,1)
+        delta = delta * (u**(1/x_adv[0].numel())) * eps
         x_adv = torch.clamp(x_adv + delta, clamp_min, clamp_max).detach()
-
-    # 3) PGD 반복
+    
     for _ in range(iters):
-        # 3-1) gradient 계산 준비
         x_adv.requires_grad_(True)
         outputs = model(x_adv)
         loss = F.cross_entropy(outputs, y)
+        grad = torch.autograd.grad(loss, x_adv)[0]
         
-        # 3-2) 입력에 대한 gradient 계산
-        grad = torch.autograd.grad(loss, x_adv,
-                                   retain_graph=False, create_graph=False)[0]
-
-        # 3-3) sign gradient를 이용해 스텝 이동
-        x_adv = x_adv + alpha * grad.sign()
-
-        # 3-4) 원본 x로부터 eps 내에 projection (L_inf 구간으로 클리핑)
-        delta = torch.clamp(x_adv - x, min=-eps, max=eps)
+        # 2) grad 방향 정규화 (L2‐norm)
+        grad_flat = grad.view(grad.size(0), -1)
+        grad_norm = torch.norm(grad_flat, p=2, dim=1).view(-1,1,1,1)
+        normalized_grad = grad / (grad_norm + 1e-12)
+        
+        # 3) 스텝 이동
+        x_adv = x_adv + alpha * normalized_grad
+        
+        # 4) L2‐ball projection
+        delta = x_adv - x
+        delta_flat = delta.view(delta.size(0), -1)
+        delta_norm = torch.norm(delta_flat, p=2, dim=1).view(-1,1,1,1)
+        factor = torch.clamp(eps / (delta_norm + 1e-12), max=1.0)
+        delta = delta * factor
+        
         x_adv = torch.clamp(x + delta, clamp_min, clamp_max).detach()
-
+    
     return x_adv
+
 
 
 
