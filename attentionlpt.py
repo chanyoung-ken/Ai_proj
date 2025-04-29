@@ -10,7 +10,7 @@ from typing import List, Dict, Tuple, Optional
 import torch
 import torch.nn.functional as F
 
-def pgd_attack_l2(model, x, y,
+def pgd_attack(model, x, y,
                   eps: float=1.0,      # L2 반경
                   alpha: float=0.1,    # 한 스텝 크기
                   iters: int=40,
