@@ -11,6 +11,8 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 from torchvision import transforms, datasets, models
 from tqdm import tqdm
+import mlflow
+import mlflow.pytorch
 
 # AT+ALP utilities (assumed installed/available)
 from attentionlpt import FeatureExtractor, compute_at_alp_loss
@@ -179,6 +181,9 @@ def parse_args():
 
 args = parse_args()
 
+# MLflow 실험 이름 설정 (선택사항, 환경 변수로도 설정 가능)
+# mlflow.set_experiment("CIFAR10_AT_ALP_ResNet18") # 주석 처리하거나 원하는 이름 사용
+
 try:
     with open('best_hyperparams.json', 'r') as f:
         loaded_hp = json.load(f)
@@ -248,7 +253,6 @@ test_loader = DataLoader(test_set, batch_size=BATCH_SIZE, shuffle=False, num_wor
 # --------------------
 # Model & Utilities
 # --------------------
-# Use ResNet18 pre-defined in torchvision, adjust for CIFAR10
 model = ResNet18MultiAttention(num_classes=10)
 model = model.to(device)
 
@@ -266,87 +270,166 @@ else:
 # LR Scheduler
 scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS)
 
-# Loss placeholder (will be returned by compute_at_alp_loss)
-
 # --------------------
-# Training Loop
+# Training Loop with MLflow
 # --------------------
 best_robust_acc = 0.0
-best_weights = copy.deepcopy(model.state_dict())
 start_time = time.time()
 
-for epoch in range(1, EPOCHS+1):
-    model.train()
-    pbar = tqdm(train_loader, desc=f"Epoch {epoch}/{EPOCHS}")
-    for images, labels in pbar:
-        images, labels = images.to(device), labels.to(device)
+# MLflow 실행 시작
+with mlflow.start_run() as run:
+    print(f"MLflow Run ID: {run.info.run_id}")
+    # --- 파라미터 로깅 ---
+    mlflow.log_param("adv_eps", ADV_EPS)
+    mlflow.log_param("epochs", EPOCHS)
+    mlflow.log_param("learning_rate", LR)
+    mlflow.log_param("weight_decay", WEIGHT_DECAY)
+    mlflow.log_param("optimizer", OPTIMIZER)
+    mlflow.log_param("batch_size", BATCH_SIZE)
+    mlflow.log_param("adv_alpha", ADV_ALPHA)
+    mlflow.log_param("adv_iters", ADV_ITERS)
+    mlflow.log_param("alpha_alp", ALPHA_ALP)
+    mlflow.log_param("beta_at", BETA_AT)
+    mlflow.log_param("at_layers", ",".join(AT_LAYERS)) # 리스트는 문자열로 변환하여 로깅
 
-        # Compute AT+ALP loss
-        attack_kwargs = {'eps': ADV_EPS, 'alpha': ADV_ALPHA, 'iters': ADV_ITERS}
-        total_loss, ce_loss, alp_loss, at_loss = compute_at_alp_loss(
-            model, feature_extractor,
-            images, labels,
-            alpha=ALPHA_ALP, beta=BETA_AT,
-            attack_kwargs=attack_kwargs
-        )
+    best_weights = copy.deepcopy(model.state_dict()) # 베스트 가중치 초기화
 
-        optimizer.zero_grad()
-        total_loss.backward()
-        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-        optimizer.step()
+    for epoch in range(1, EPOCHS+1):
+        model.train()
+        epoch_total_loss = 0.0
+        epoch_ce_loss = 0.0
+        epoch_alp_loss = 0.0
+        epoch_at_loss = 0.0
+        num_batches = 0
 
-        # --- 추가 디버깅 --- 
-        print(f"[DEBUG] Raw loss values: CE={ce_loss.item():.6f}, LP={alp_loss.item():.10f}, AT={at_loss.item():.6f}") # LP 정밀도 높임
-        # -------------------
+        pbar = tqdm(train_loader, desc=f"Epoch {epoch}/{EPOCHS}")
+        for images, labels in pbar:
+            images, labels = images.to(device), labels.to(device)
+
+            # Compute AT+ALP loss
+            attack_kwargs = {'eps': ADV_EPS, 'alpha': ADV_ALPHA, 'iters': ADV_ITERS}
+            total_loss, ce_loss, alp_loss, at_loss = compute_at_alp_loss(
+                model, feature_extractor,
+                images, labels,
+                alpha=ALPHA_ALP, beta=BETA_AT,
+                attack_kwargs=attack_kwargs
+            )
+
+            optimizer.zero_grad()
+            total_loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            optimizer.step()
+
+            # 에폭 누적 손실 계산
+            epoch_total_loss += total_loss.item()
+            epoch_ce_loss += ce_loss.item()
+            # alp_loss는 매우 작을 수 있으므로 주의
+            epoch_alp_loss += alp_loss.item() if alp_loss is not None else 0.0 
+            epoch_at_loss += at_loss.item() if at_loss is not None else 0.0
+            num_batches += 1
+            
+            # 배치별 로깅 (너무 많으면 주석 처리 가능)
+            # mlflow.log_metric("batch_total_loss", total_loss.item())
+            # mlflow.log_metric("batch_ce_loss", ce_loss.item())
+            # mlflow.log_metric("batch_alp_loss", alp_loss.item() if alp_loss is not None else 0.0)
+            # mlflow.log_metric("batch_at_loss", at_loss.item() if at_loss is not None else 0.0)
+
+            pbar.set_postfix({
+                'Total': f"{total_loss.item():.3f}",
+                'CE': f"{ce_loss.item():.3f}",
+                'LP': f"{alp_loss.item():.10f}" if alp_loss is not None else "N/A",
+                'AT': f"{at_loss.item():.3f}" if at_loss is not None else "N/A"
+            })
+            
+            # 기존 [DEBUG] 프린트 제거 또는 MLflow 로깅으로 대체 가능
+            # print(f"[DEBUG] Raw loss values: CE={ce_loss.item():.6f}, LP={alp_loss.item():.10f}, AT={at_loss.item():.6f}")
+
+        scheduler.step()
+
+        # --- 에폭별 메트릭 로깅 ---
+        avg_total_loss = epoch_total_loss / num_batches
+        avg_ce_loss = epoch_ce_loss / num_batches
+        avg_alp_loss = epoch_alp_loss / num_batches
+        avg_at_loss = epoch_at_loss / num_batches
         
-        pbar.set_postfix({
-            'Total': f"{total_loss.item():.3f}",
-            'CE': f"{ce_loss.item():.3f}",
-            'LP': f"{alp_loss.item():.10f}", # 소수점 10자리로 변경
-            'AT': f"{at_loss.item():.3f}"
-        })
+        mlflow.log_metric("avg_total_loss", avg_total_loss, step=epoch)
+        mlflow.log_metric("avg_ce_loss", avg_ce_loss, step=epoch)
+        mlflow.log_metric("avg_alp_loss", avg_alp_loss, step=epoch)
+        mlflow.log_metric("avg_at_loss", avg_at_loss, step=epoch)
+        mlflow.log_metric("learning_rate", scheduler.get_last_lr()[0], step=epoch) # 현재 학습률 로깅
 
-    scheduler.step()
+        # Evaluate robustness via simple PGD
+        model.eval()
+        correct, total = 0, 0
+        with torch.no_grad(): # 평가 시 그래디언트 계산 비활성화
+            for images, labels in test_loader:
+                images, labels = images.to(device), labels.to(device)
 
-    # Evaluate robustness via simple PGD
-    model.eval()
-    correct, total = 0, 0
-    for images, labels in test_loader:
-        images, labels = images.to(device), labels.to(device)
-        
-        # 수정: alp_pgd_attack 호출 시 인자 순서 및 불필요 인자 제거
-        adv_images = alp_pgd_attack(
-            model=model,
-            x=images,
-            y=labels,
-            eps=ADV_EPS,
-            alpha=ADV_ALPHA,
-            iters=ADV_ITERS
-        )
-        
-        with torch.no_grad():
-            outputs = model(adv_images)
-            preds = outputs.argmax(dim=1)
-            correct += (preds == labels).sum().item()
-            total += labels.size(0)
-    robust_acc = correct / total
+                # 수정: alp_pgd_attack 호출 시 인자 순서 및 불필요 인자 제거
+                adv_images = alp_pgd_attack(
+                    model=model,
+                    x=images,
+                    y=labels,
+                    eps=ADV_EPS,
+                    alpha=ADV_ALPHA,
+                    iters=ADV_ITERS
+                )
 
-    print(f"Epoch {epoch}: Robust Acc (PGD eps={ADV_EPS:.3f}): {robust_acc:.4f}")
-    if robust_acc > best_robust_acc:
-        best_robust_acc = robust_acc
-        best_weights = copy.deepcopy(model.state_dict())
+                outputs = model(adv_images)
+                preds = outputs.argmax(dim=1)
+                correct += (preds == labels).sum().item()
+                total += labels.size(0)
+        robust_acc = correct / total
+
+        # --- 강건 정확도 로깅 ---
+        mlflow.log_metric("robust_acc", robust_acc, step=epoch)
+        print(f"Epoch {epoch}: Robust Acc (PGD eps={ADV_EPS:.3f}): {robust_acc:.4f}")
+
+        if robust_acc > best_robust_acc:
+            best_robust_acc = robust_acc
+            best_weights = copy.deepcopy(model.state_dict())
+            # 최고 성능 갱신 시 로그 추가 (선택 사항)
+            mlflow.log_metric("best_robust_acc_so_far", best_robust_acc, step=epoch) 
+            print(f"*** New best robust accuracy: {best_robust_acc:.4f} at epoch {epoch} ***")
+
+
+    # --- 최종 결과 및 모델 로깅 ---
+    print(f"Training finished. Best Robust Accuracy: {best_robust_acc:.4f}")
+    mlflow.log_metric("best_robust_acc", best_robust_acc) # 최종 최고 정확도 로깅
+
+    # 최고 가중치로 모델 상태 복원
+    model.load_state_dict(best_weights)
+
+    # 모델 로컬 저장 (기존 방식 유지)
+    os.makedirs('saved_models', exist_ok=True)
+    eps_str = f"eps{ADV_EPS:.4f}".replace('.', '_')
+    model_filename = f'cifar10_at_alp_resnet18_{eps_str}.pth'
+    model_path = os.path.join('saved_models', model_filename)
+    torch.save(model.state_dict(), model_path)
+    print(f"Best model weights saved locally to {model_path}")
+
+    # MLflow에 모델 아티팩트 로깅
+    # 'model'은 MLflow UI에 표시될 아티팩트 내 폴더 이름입니다.
+    # registered_model_name을 사용하면 모델 레지스트리에 등록할 수 있습니다.
+    registered_model_name = f"cifar10-resnet18-at-alp-eps{eps_str}" # 모델 레지스트리 이름 (선택사항)
+    print(f"Logging model to MLflow artifact path 'model'...")
+    mlflow.pytorch.log_model(model, "model", registered_model_name=registered_model_name)
+    print("Model logged to MLflow successfully.")
+    
+    # MLflow에 로컬 모델 파일도 아티팩트로 저장 (선택사항)
+    # mlflow.log_artifact(model_path, artifact_path="local_saved_model")
 
 # --------------------
-# Save Best Model
+# 스크립트 종료
 # --------------------
-model.load_state_dict(best_weights)
-os.makedirs('saved_models', exist_ok=True)
-eps_str = f"eps{ADV_EPS:.4f}".replace('.', '_')
-model_filename = f'cifar10_at_alp_resnet18_{eps_str}.pth'
-model_path = os.path.join('saved_models', model_filename)
-torch.save(model.state_dict(), model_path)
-print(f"Best robust acc: {best_robust_acc:.4f}, model saved to {model_path}")
-print(f"Total training time: {time.time() - start_time:.1f}s")
+total_training_time = time.time() - start_time
+print(f"Total training time: {total_training_time:.1f}s")
+# MLflow에 총 학습 시간 로깅 (run 컨텍스트 밖에서도 가능)
+# mlflow.log_metric("total_training_time_seconds", total_training_time) # 주석 해제 시 마지막 run에 기록됨
 
 # Cleanup hooks
 feature_extractor.remove_hooks()
+print("Feature extractor hooks removed.")
+
+# FINAl_ROBUST_ACC 프린트 제거 (MLflow가 관리)
+# print(f"FINAL_ROBUST_ACC:{best_robust_acc:.4f}")
