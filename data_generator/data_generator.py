@@ -12,13 +12,12 @@ attacks = {
     'pgd':          lambda model: torchattacks.PGD(model, eps=8/255, alpha=2/255, steps=40, random_start=True),
     'rfgsm':        lambda model: torchattacks.RFGSM(model, eps=8/255, alpha=2/255),
     'mifgsm':       lambda model: torchattacks.MIFGSM(model, eps=8/255, steps=40, decay=1.0),
-    'cw':           lambda model: torchattacks.CW(model, c=1, steps=1000, lr=0.01),
 }
 
 # 1) 데이터셋 로드 (train or test 중 선택)
 transform = T.Compose([T.ToTensor(),])  # 나중에 공격 시 normalization은 atk.set_normalization_used로
-dataset = torchvision.datasets.CIFAR10(root='./data',
-                                       train=False,
+dataset = torchvision.datasets.CIFAR10(root='./train_data',
+                                       train=True,
                                        download=True,
                                        transform=transform)
 loader  = torch.utils.data.DataLoader(dataset,
@@ -30,7 +29,7 @@ loader  = torch.utils.data.DataLoader(dataset,
 model = torchvision.models.resnet50(pretrained=True).eval().cuda()
 
 # 3) 출력 디렉터리 생성
-os.makedirs('data', exist_ok=True)
+os.makedirs('train_data', exist_ok=True)
 
 # 4) 각 공격별로 이미지·레이블 생성 & 저장
 for name, atk_fn in attacks.items():
@@ -52,7 +51,6 @@ for name, atk_fn in attacks.items():
         labels = labels.cuda()
 
         if atk is not None:
-            with torch.no_grad():
                 adv_images = atk(images, labels)
         else:
             adv_images = images
@@ -66,7 +64,7 @@ for name, atk_fn in attacks.items():
     lbls_tensor = torch.cat(all_lbls, dim=0)   # [N]
 
     # 저장
-    save_path = f'data/{name}.pt'
+    save_path = f'train_data/{name}.pt'
     print(f'    saving {imgs_tensor.shape} to {save_path}')
     torch.save((imgs_tensor, lbls_tensor), save_path)
 

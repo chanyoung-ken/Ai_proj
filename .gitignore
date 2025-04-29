@@ -1,2 +1,3 @@
-data/
-data/
+# 데이터 생성기 폴더 내의 테스트/학습 데이터 폴더 무시
+data_generator/test_data/
+data_generator/train_data/
