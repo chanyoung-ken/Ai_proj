@@ -1,0 +1,889 @@
+Warning: Key 'CIFAR10_AT_ALP_RESNET18' not found in best_hyperparams.json. Using default values.
+Using device: cuda
+Files already downloaded and verified
+Files already downloaded and verified
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.8/site-packages/torchvision/models/_utils.py:220: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py:1402: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Epoch 1/50:   0%|          | 0/196 [00:00<?, ?it/s][DEBUG] Difference between x_adv and x: 730422.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000002571
+[DEBUG] Difference between logits_clean and logits_adv: 1.1092
+[DEBUG] Layer 'layer1': Feat Diff: 9939725.0000, NormVec Diff: 4959.7461, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304639, LP: 0.0000002571, AT: 0.008127
+[DEBUG] Raw loss values: CE=2.304639, LP=0.0000002571, AT=0.008127
+Epoch 1/50:   0%|          | 0/196 [00:14<?, ?it/s, Total=2.313, CE=2.305, LP=0.0000002571, AT=0.008]Epoch 1/50:   1%|          | 1/196 [00:14<46:04, 14.18s/it, Total=2.313, CE=2.305, LP=0.0000002571, AT=0.008][DEBUG] Difference between x_adv and x: 712779.9375
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000002454
+[DEBUG] Difference between logits_clean and logits_adv: 1.0785
+[DEBUG] Layer 'layer1': Feat Diff: 9722234.0000, NormVec Diff: 4938.9551, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301001, LP: 0.0000002454, AT: 0.007866
+[DEBUG] Raw loss values: CE=2.301001, LP=0.0000002454, AT=0.007866
+Epoch 1/50:   1%|          | 1/196 [00:15<46:04, 14.18s/it, Total=2.309, CE=2.301, LP=0.0000002454, AT=0.008]Epoch 1/50:   1%|          | 2/196 [00:15<21:20,  6.60s/it, Total=2.309, CE=2.301, LP=0.0000002454, AT=0.008][DEBUG] Difference between x_adv and x: 707247.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000002216
+[DEBUG] Difference between logits_clean and logits_adv: 1.0330
+[DEBUG] Layer 'layer1': Feat Diff: 9580168.0000, NormVec Diff: 5044.5332, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303420, LP: 0.0000002216, AT: 0.007801
+[DEBUG] Raw loss values: CE=2.303420, LP=0.0000002216, AT=0.007801
+Epoch 1/50:   1%|          | 2/196 [00:16<21:20,  6.60s/it, Total=2.311, CE=2.303, LP=0.0000002216, AT=0.008]Epoch 1/50:   2%|▏         | 3/196 [00:16<13:28,  4.19s/it, Total=2.311, CE=2.303, LP=0.0000002216, AT=0.008][DEBUG] Difference between x_adv and x: 726823.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000002330
+[DEBUG] Difference between logits_clean and logits_adv: 1.0539
+[DEBUG] Layer 'layer1': Feat Diff: 9763277.0000, NormVec Diff: 4955.8037, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302562, LP: 0.0000002330, AT: 0.007759
+[DEBUG] Raw loss values: CE=2.302562, LP=0.0000002330, AT=0.007759
+Epoch 1/50:   2%|▏         | 3/196 [00:18<13:28,  4.19s/it, Total=2.310, CE=2.303, LP=0.0000002330, AT=0.008]Epoch 1/50:   2%|▏         | 4/196 [00:18<09:47,  3.06s/it, Total=2.310, CE=2.303, LP=0.0000002330, AT=0.008][DEBUG] Difference between x_adv and x: 729713.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000002167
+[DEBUG] Difference between logits_clean and logits_adv: 1.0107
+[DEBUG] Layer 'layer1': Feat Diff: 9801592.0000, NormVec Diff: 5247.2388, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303340, LP: 0.0000002167, AT: 0.008947
+[DEBUG] Raw loss values: CE=2.303340, LP=0.0000002167, AT=0.008947
+Epoch 1/50:   2%|▏         | 4/196 [00:19<09:47,  3.06s/it, Total=2.312, CE=2.303, LP=0.0000002167, AT=0.009]Epoch 1/50:   3%|▎         | 5/196 [00:19<07:36,  2.39s/it, Total=2.312, CE=2.303, LP=0.0000002167, AT=0.009][DEBUG] Difference between x_adv and x: 706679.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001900
+[DEBUG] Difference between logits_clean and logits_adv: 0.9517
+[DEBUG] Layer 'layer1': Feat Diff: 9478050.0000, NormVec Diff: 4979.3149, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303322, LP: 0.0000001900, AT: 0.008019
+[DEBUG] Raw loss values: CE=2.303322, LP=0.0000001900, AT=0.008019
+Epoch 1/50:   3%|▎         | 5/196 [00:22<07:36,  2.39s/it, Total=2.311, CE=2.303, LP=0.0000001900, AT=0.008]Epoch 1/50:   3%|▎         | 6/196 [00:22<08:46,  2.77s/it, Total=2.311, CE=2.303, LP=0.0000001900, AT=0.008][DEBUG] Difference between x_adv and x: 727772.0625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001861
+[DEBUG] Difference between logits_clean and logits_adv: 0.9369
+[DEBUG] Layer 'layer1': Feat Diff: 9622546.0000, NormVec Diff: 5091.2432, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301611, LP: 0.0000001861, AT: 0.008615
+[DEBUG] Raw loss values: CE=2.301611, LP=0.0000001861, AT=0.008615
+Epoch 1/50:   3%|▎         | 6/196 [00:23<08:46,  2.77s/it, Total=2.310, CE=2.302, LP=0.0000001861, AT=0.009]Epoch 1/50:   4%|▎         | 7/196 [00:23<06:53,  2.19s/it, Total=2.310, CE=2.302, LP=0.0000001861, AT=0.009][DEBUG] Difference between x_adv and x: 717395.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001670
+[DEBUG] Difference between logits_clean and logits_adv: 0.8754
+[DEBUG] Layer 'layer1': Feat Diff: 9461274.0000, NormVec Diff: 5000.9854, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302581, LP: 0.0000001670, AT: 0.007920
+[DEBUG] Raw loss values: CE=2.302581, LP=0.0000001670, AT=0.007920
+Epoch 1/50:   4%|▎         | 7/196 [00:24<06:53,  2.19s/it, Total=2.311, CE=2.303, LP=0.0000001670, AT=0.008]Epoch 1/50:   4%|▍         | 8/196 [00:24<05:35,  1.78s/it, Total=2.311, CE=2.303, LP=0.0000001670, AT=0.008][DEBUG] Difference between x_adv and x: 729462.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001532
+[DEBUG] Difference between logits_clean and logits_adv: 0.8291
+[DEBUG] Layer 'layer1': Feat Diff: 9545356.0000, NormVec Diff: 5318.9336, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302240, LP: 0.0000001532, AT: 0.008658
+[DEBUG] Raw loss values: CE=2.302240, LP=0.0000001532, AT=0.008658
+Epoch 1/50:   4%|▍         | 8/196 [00:25<05:35,  1.78s/it, Total=2.311, CE=2.302, LP=0.0000001532, AT=0.009]Epoch 1/50:   5%|▍         | 9/196 [00:25<04:39,  1.50s/it, Total=2.311, CE=2.302, LP=0.0000001532, AT=0.009][DEBUG] Difference between x_adv and x: 733313.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001441
+[DEBUG] Difference between logits_clean and logits_adv: 0.7893
+[DEBUG] Layer 'layer1': Feat Diff: 9473144.0000, NormVec Diff: 5149.9214, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.305398, LP: 0.0000001441, AT: 0.008218
+[DEBUG] Raw loss values: CE=2.305398, LP=0.0000001441, AT=0.008218
+Epoch 1/50:   5%|▍         | 9/196 [00:26<04:39,  1.50s/it, Total=2.314, CE=2.305, LP=0.0000001441, AT=0.008]Epoch 1/50:   5%|▌         | 10/196 [00:26<04:04,  1.31s/it, Total=2.314, CE=2.305, LP=0.0000001441, AT=0.008][DEBUG] Difference between x_adv and x: 717138.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001318
+[DEBUG] Difference between logits_clean and logits_adv: 0.7537
+[DEBUG] Layer 'layer1': Feat Diff: 9199058.0000, NormVec Diff: 5057.1475, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302216, LP: 0.0000001318, AT: 0.008066
+[DEBUG] Raw loss values: CE=2.302216, LP=0.0000001318, AT=0.008066
+Epoch 1/50:   5%|▌         | 10/196 [00:27<04:04,  1.31s/it, Total=2.310, CE=2.302, LP=0.0000001318, AT=0.008]Epoch 1/50:   6%|▌         | 11/196 [00:27<03:40,  1.19s/it, Total=2.310, CE=2.302, LP=0.0000001318, AT=0.008][DEBUG] Difference between x_adv and x: 747897.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001425
+[DEBUG] Difference between logits_clean and logits_adv: 0.7696
+[DEBUG] Layer 'layer1': Feat Diff: 9458698.0000, NormVec Diff: 5241.3193, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303016, LP: 0.0000001425, AT: 0.008579
+[DEBUG] Raw loss values: CE=2.303016, LP=0.0000001425, AT=0.008579
+Epoch 1/50:   6%|▌         | 11/196 [00:28<03:40,  1.19s/it, Total=2.312, CE=2.303, LP=0.0000001425, AT=0.009]Epoch 1/50:   6%|▌         | 12/196 [00:28<03:22,  1.10s/it, Total=2.312, CE=2.303, LP=0.0000001425, AT=0.009][DEBUG] Difference between x_adv and x: 729810.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001313
+[DEBUG] Difference between logits_clean and logits_adv: 0.7384
+[DEBUG] Layer 'layer1': Feat Diff: 9173252.0000, NormVec Diff: 5024.4277, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301239, LP: 0.0000001313, AT: 0.007886
+[DEBUG] Raw loss values: CE=2.301239, LP=0.0000001313, AT=0.007886
+Epoch 1/50:   6%|▌         | 12/196 [00:29<03:22,  1.10s/it, Total=2.309, CE=2.301, LP=0.0000001313, AT=0.008]Epoch 1/50:   7%|▋         | 13/196 [00:29<03:09,  1.04s/it, Total=2.309, CE=2.301, LP=0.0000001313, AT=0.008][DEBUG] Difference between x_adv and x: 733902.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001328
+[DEBUG] Difference between logits_clean and logits_adv: 0.7371
+[DEBUG] Layer 'layer1': Feat Diff: 9079496.0000, NormVec Diff: 4958.7207, Current AT Loss: 0.0005
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302852, LP: 0.0000001328, AT: 0.007455
+[DEBUG] Raw loss values: CE=2.302852, LP=0.0000001328, AT=0.007455
+Epoch 1/50:   7%|▋         | 13/196 [00:30<03:09,  1.04s/it, Total=2.310, CE=2.303, LP=0.0000001328, AT=0.007]Epoch 1/50:   7%|▋         | 14/196 [00:30<02:59,  1.01it/s, Total=2.310, CE=2.303, LP=0.0000001328, AT=0.007][DEBUG] Difference between x_adv and x: 703451.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001279
+[DEBUG] Difference between logits_clean and logits_adv: 0.7199
+[DEBUG] Layer 'layer1': Feat Diff: 8604729.0000, NormVec Diff: 4990.2168, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303776, LP: 0.0000001279, AT: 0.007568
+[DEBUG] Raw loss values: CE=2.303776, LP=0.0000001279, AT=0.007568
+Epoch 1/50:   7%|▋         | 14/196 [00:30<02:59,  1.01it/s, Total=2.311, CE=2.304, LP=0.0000001279, AT=0.008]Epoch 1/50:   8%|▊         | 15/196 [00:30<02:55,  1.03it/s, Total=2.311, CE=2.304, LP=0.0000001279, AT=0.008][DEBUG] Difference between x_adv and x: 705188.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001331
+[DEBUG] Difference between logits_clean and logits_adv: 0.7307
+[DEBUG] Layer 'layer1': Feat Diff: 8551960.0000, NormVec Diff: 5252.8730, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302023, LP: 0.0000001331, AT: 0.008082
+[DEBUG] Raw loss values: CE=2.302023, LP=0.0000001331, AT=0.008082
+Epoch 1/50:   8%|▊         | 15/196 [00:31<02:55,  1.03it/s, Total=2.310, CE=2.302, LP=0.0000001331, AT=0.008]Epoch 1/50:   8%|▊         | 16/196 [00:31<02:50,  1.05it/s, Total=2.310, CE=2.302, LP=0.0000001331, AT=0.008][DEBUG] Difference between x_adv and x: 701847.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001381
+[DEBUG] Difference between logits_clean and logits_adv: 0.7466
+[DEBUG] Layer 'layer1': Feat Diff: 8395637.0000, NormVec Diff: 5155.7871, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303544, LP: 0.0000001381, AT: 0.008048
+[DEBUG] Raw loss values: CE=2.303544, LP=0.0000001381, AT=0.008048
+Epoch 1/50:   8%|▊         | 16/196 [00:32<02:50,  1.05it/s, Total=2.312, CE=2.304, LP=0.0000001381, AT=0.008]Epoch 1/50:   9%|▊         | 17/196 [00:32<02:46,  1.08it/s, Total=2.312, CE=2.304, LP=0.0000001381, AT=0.008][DEBUG] Difference between x_adv and x: 693979.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001338
+[DEBUG] Difference between logits_clean and logits_adv: 0.7410
+[DEBUG] Layer 'layer1': Feat Diff: 8230079.0000, NormVec Diff: 5041.6636, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304230, LP: 0.0000001338, AT: 0.007489
+[DEBUG] Raw loss values: CE=2.304230, LP=0.0000001338, AT=0.007489
+Epoch 1/50:   9%|▊         | 17/196 [00:33<02:46,  1.08it/s, Total=2.312, CE=2.304, LP=0.0000001338, AT=0.007]Epoch 1/50:   9%|▉         | 18/196 [00:33<02:47,  1.07it/s, Total=2.312, CE=2.304, LP=0.0000001338, AT=0.007][DEBUG] Difference between x_adv and x: 730817.1875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001471
+[DEBUG] Difference between logits_clean and logits_adv: 0.7844
+[DEBUG] Layer 'layer1': Feat Diff: 8540674.0000, NormVec Diff: 5090.7441, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301417, LP: 0.0000001471, AT: 0.007285
+[DEBUG] Raw loss values: CE=2.301417, LP=0.0000001471, AT=0.007285
+Epoch 1/50:   9%|▉         | 18/196 [00:34<02:47,  1.07it/s, Total=2.309, CE=2.301, LP=0.0000001471, AT=0.007]Epoch 1/50:  10%|▉         | 19/196 [00:34<02:42,  1.09it/s, Total=2.309, CE=2.301, LP=0.0000001471, AT=0.007][DEBUG] Difference between x_adv and x: 725289.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001393
+[DEBUG] Difference between logits_clean and logits_adv: 0.7776
+[DEBUG] Layer 'layer1': Feat Diff: 8401451.0000, NormVec Diff: 5285.1528, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301922, LP: 0.0000001393, AT: 0.007792
+[DEBUG] Raw loss values: CE=2.301922, LP=0.0000001393, AT=0.007792
+Epoch 1/50:  10%|▉         | 19/196 [00:35<02:42,  1.09it/s, Total=2.310, CE=2.302, LP=0.0000001393, AT=0.008]Epoch 1/50:  10%|█         | 20/196 [00:35<02:40,  1.10it/s, Total=2.310, CE=2.302, LP=0.0000001393, AT=0.008][DEBUG] Difference between x_adv and x: 709927.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001293
+[DEBUG] Difference between logits_clean and logits_adv: 0.7502
+[DEBUG] Layer 'layer1': Feat Diff: 8085824.0000, NormVec Diff: 5255.5142, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303066, LP: 0.0000001293, AT: 0.007748
+[DEBUG] Raw loss values: CE=2.303066, LP=0.0000001293, AT=0.007748
+Epoch 1/50:  10%|█         | 20/196 [00:36<02:40,  1.10it/s, Total=2.311, CE=2.303, LP=0.0000001293, AT=0.008]Epoch 1/50:  11%|█         | 21/196 [00:36<02:41,  1.09it/s, Total=2.311, CE=2.303, LP=0.0000001293, AT=0.008][DEBUG] Difference between x_adv and x: 713494.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001210
+[DEBUG] Difference between logits_clean and logits_adv: 0.7403
+[DEBUG] Layer 'layer1': Feat Diff: 8036008.0000, NormVec Diff: 5123.4756, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303648, LP: 0.0000001210, AT: 0.007148
+[DEBUG] Raw loss values: CE=2.303648, LP=0.0000001210, AT=0.007148
+Epoch 1/50:  11%|█         | 21/196 [00:37<02:41,  1.09it/s, Total=2.311, CE=2.304, LP=0.0000001210, AT=0.007]Epoch 1/50:  11%|█         | 22/196 [00:37<02:38,  1.10it/s, Total=2.311, CE=2.304, LP=0.0000001210, AT=0.007][DEBUG] Difference between x_adv and x: 725792.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000001181
+[DEBUG] Difference between logits_clean and logits_adv: 0.7349
+[DEBUG] Layer 'layer1': Feat Diff: 8055976.0000, NormVec Diff: 5062.2705, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302198, LP: 0.0000001181, AT: 0.007030
+[DEBUG] Raw loss values: CE=2.302198, LP=0.0000001181, AT=0.007030
+Epoch 1/50:  11%|█         | 22/196 [00:38<02:38,  1.10it/s, Total=2.309, CE=2.302, LP=0.0000001181, AT=0.007]Epoch 1/50:  12%|█▏        | 23/196 [00:38<02:36,  1.11it/s, Total=2.309, CE=2.302, LP=0.0000001181, AT=0.007][DEBUG] Difference between x_adv and x: 695545.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000999
+[DEBUG] Difference between logits_clean and logits_adv: 0.6681
+[DEBUG] Layer 'layer1': Feat Diff: 7605965.0000, NormVec Diff: 4761.0107, Current AT Loss: 0.0005
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304433, LP: 0.0000000999, AT: 0.006205
+[DEBUG] Raw loss values: CE=2.304433, LP=0.0000000999, AT=0.006205
+Epoch 1/50:  12%|█▏        | 23/196 [00:39<02:36,  1.11it/s, Total=2.311, CE=2.304, LP=0.0000000999, AT=0.006]Epoch 1/50:  12%|█▏        | 24/196 [00:39<02:35,  1.10it/s, Total=2.311, CE=2.304, LP=0.0000000999, AT=0.006][DEBUG] Difference between x_adv and x: 728889.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000993
+[DEBUG] Difference between logits_clean and logits_adv: 0.6692
+[DEBUG] Layer 'layer1': Feat Diff: 7917727.0000, NormVec Diff: 5126.7329, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.305251, LP: 0.0000000993, AT: 0.007010
+[DEBUG] Raw loss values: CE=2.305251, LP=0.0000000993, AT=0.007010
+Epoch 1/50:  12%|█▏        | 24/196 [00:40<02:35,  1.10it/s, Total=2.312, CE=2.305, LP=0.0000000993, AT=0.007]Epoch 1/50:  13%|█▎        | 25/196 [00:40<02:33,  1.11it/s, Total=2.312, CE=2.305, LP=0.0000000993, AT=0.007][DEBUG] Difference between x_adv and x: 741134.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000934
+[DEBUG] Difference between logits_clean and logits_adv: 0.6498
+[DEBUG] Layer 'layer1': Feat Diff: 7919682.0000, NormVec Diff: 5179.9111, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303092, LP: 0.0000000934, AT: 0.007270
+[DEBUG] Raw loss values: CE=2.303092, LP=0.0000000934, AT=0.007270
+Epoch 1/50:  13%|█▎        | 25/196 [00:40<02:33,  1.11it/s, Total=2.310, CE=2.303, LP=0.0000000934, AT=0.007]Epoch 1/50:  13%|█▎        | 26/196 [00:40<02:31,  1.13it/s, Total=2.310, CE=2.303, LP=0.0000000934, AT=0.007][DEBUG] Difference between x_adv and x: 700166.1875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000762
+[DEBUG] Difference between logits_clean and logits_adv: 0.5756
+[DEBUG] Layer 'layer1': Feat Diff: 7394465.0000, NormVec Diff: 5038.4355, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302783, LP: 0.0000000762, AT: 0.006709
+[DEBUG] Raw loss values: CE=2.302783, LP=0.0000000762, AT=0.006709
+Epoch 1/50:  13%|█▎        | 26/196 [00:41<02:31,  1.13it/s, Total=2.309, CE=2.303, LP=0.0000000762, AT=0.007]Epoch 1/50:  14%|█▍        | 27/196 [00:41<02:33,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000762, AT=0.007][DEBUG] Difference between x_adv and x: 719296.9375
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000742
+[DEBUG] Difference between logits_clean and logits_adv: 0.5622
+[DEBUG] Layer 'layer1': Feat Diff: 7464093.0000, NormVec Diff: 5018.9854, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302634, LP: 0.0000000742, AT: 0.006623
+[DEBUG] Raw loss values: CE=2.302634, LP=0.0000000742, AT=0.006623
+Epoch 1/50:  14%|█▍        | 27/196 [00:42<02:33,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000742, AT=0.007]Epoch 1/50:  14%|█▍        | 28/196 [00:42<02:31,  1.11it/s, Total=2.309, CE=2.303, LP=0.0000000742, AT=0.007][DEBUG] Difference between x_adv and x: 755941.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000718
+[DEBUG] Difference between logits_clean and logits_adv: 0.5516
+[DEBUG] Layer 'layer1': Feat Diff: 7717774.0000, NormVec Diff: 5070.9077, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302816, LP: 0.0000000718, AT: 0.006600
+[DEBUG] Raw loss values: CE=2.302816, LP=0.0000000718, AT=0.006600
+Epoch 1/50:  14%|█▍        | 28/196 [00:43<02:31,  1.11it/s, Total=2.309, CE=2.303, LP=0.0000000718, AT=0.007]Epoch 1/50:  15%|█▍        | 29/196 [00:43<02:29,  1.12it/s, Total=2.309, CE=2.303, LP=0.0000000718, AT=0.007][DEBUG] Difference between x_adv and x: 709806.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000569
+[DEBUG] Difference between logits_clean and logits_adv: 0.4916
+[DEBUG] Layer 'layer1': Feat Diff: 7197621.0000, NormVec Diff: 5137.7422, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302662, LP: 0.0000000569, AT: 0.006801
+[DEBUG] Raw loss values: CE=2.302662, LP=0.0000000569, AT=0.006801
+Epoch 1/50:  15%|█▍        | 29/196 [00:44<02:29,  1.12it/s, Total=2.309, CE=2.303, LP=0.0000000569, AT=0.007]Epoch 1/50:  15%|█▌        | 30/196 [00:44<02:30,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000569, AT=0.007][DEBUG] Difference between x_adv and x: 740929.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000554
+[DEBUG] Difference between logits_clean and logits_adv: 0.4895
+[DEBUG] Layer 'layer1': Feat Diff: 7414904.0000, NormVec Diff: 5319.8350, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303595, LP: 0.0000000554, AT: 0.007048
+[DEBUG] Raw loss values: CE=2.303595, LP=0.0000000554, AT=0.007048
+Epoch 1/50:  15%|█▌        | 30/196 [00:45<02:30,  1.10it/s, Total=2.311, CE=2.304, LP=0.0000000554, AT=0.007]Epoch 1/50:  16%|█▌        | 31/196 [00:45<02:28,  1.11it/s, Total=2.311, CE=2.304, LP=0.0000000554, AT=0.007][DEBUG] Difference between x_adv and x: 729460.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000499
+[DEBUG] Difference between logits_clean and logits_adv: 0.4662
+[DEBUG] Layer 'layer1': Feat Diff: 7202998.5000, NormVec Diff: 5172.3682, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302306, LP: 0.0000000499, AT: 0.006834
+[DEBUG] Raw loss values: CE=2.302306, LP=0.0000000499, AT=0.006834
+Epoch 1/50:  16%|█▌        | 31/196 [00:46<02:28,  1.11it/s, Total=2.309, CE=2.302, LP=0.0000000499, AT=0.007]Epoch 1/50:  16%|█▋        | 32/196 [00:46<02:26,  1.12it/s, Total=2.309, CE=2.302, LP=0.0000000499, AT=0.007][DEBUG] Difference between x_adv and x: 720287.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000419
+[DEBUG] Difference between logits_clean and logits_adv: 0.4295
+[DEBUG] Layer 'layer1': Feat Diff: 6997167.0000, NormVec Diff: 5014.8066, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303477, LP: 0.0000000419, AT: 0.006448
+[DEBUG] Raw loss values: CE=2.303477, LP=0.0000000419, AT=0.006448
+Epoch 1/50:  16%|█▋        | 32/196 [00:47<02:26,  1.12it/s, Total=2.310, CE=2.303, LP=0.0000000419, AT=0.006]Epoch 1/50:  17%|█▋        | 33/196 [00:47<02:25,  1.12it/s, Total=2.310, CE=2.303, LP=0.0000000419, AT=0.006][DEBUG] Difference between x_adv and x: 714797.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000354
+[DEBUG] Difference between logits_clean and logits_adv: 0.3907
+[DEBUG] Layer 'layer1': Feat Diff: 6905764.0000, NormVec Diff: 5196.8213, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302639, LP: 0.0000000354, AT: 0.006720
+[DEBUG] Raw loss values: CE=2.302639, LP=0.0000000354, AT=0.006720
+Epoch 1/50:  17%|█▋        | 33/196 [00:48<02:25,  1.12it/s, Total=2.309, CE=2.303, LP=0.0000000354, AT=0.007]Epoch 1/50:  17%|█▋        | 34/196 [00:48<02:27,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000354, AT=0.007][DEBUG] Difference between x_adv and x: 727470.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000320
+[DEBUG] Difference between logits_clean and logits_adv: 0.3665
+[DEBUG] Layer 'layer1': Feat Diff: 6908034.0000, NormVec Diff: 5117.4707, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303679, LP: 0.0000000320, AT: 0.006439
+[DEBUG] Raw loss values: CE=2.303679, LP=0.0000000320, AT=0.006439
+Epoch 1/50:  17%|█▋        | 34/196 [00:49<02:27,  1.10it/s, Total=2.310, CE=2.304, LP=0.0000000320, AT=0.006]Epoch 1/50:  18%|█▊        | 35/196 [00:49<02:24,  1.11it/s, Total=2.310, CE=2.304, LP=0.0000000320, AT=0.006][DEBUG] Difference between x_adv and x: 718080.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000279
+[DEBUG] Difference between logits_clean and logits_adv: 0.3328
+[DEBUG] Layer 'layer1': Feat Diff: 6752639.0000, NormVec Diff: 5209.1909, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303015, LP: 0.0000000279, AT: 0.006684
+[DEBUG] Raw loss values: CE=2.303015, LP=0.0000000279, AT=0.006684
+Epoch 1/50:  18%|█▊        | 35/196 [00:49<02:24,  1.11it/s, Total=2.310, CE=2.303, LP=0.0000000279, AT=0.007]Epoch 1/50:  18%|█▊        | 36/196 [00:49<02:26,  1.09it/s, Total=2.310, CE=2.303, LP=0.0000000279, AT=0.007][DEBUG] Difference between x_adv and x: 722838.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000256
+[DEBUG] Difference between logits_clean and logits_adv: 0.3136
+[DEBUG] Layer 'layer1': Feat Diff: 6728940.0000, NormVec Diff: 5121.7568, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303663, LP: 0.0000000256, AT: 0.006429
+[DEBUG] Raw loss values: CE=2.303663, LP=0.0000000256, AT=0.006429
+Epoch 1/50:  18%|█▊        | 36/196 [00:50<02:26,  1.09it/s, Total=2.310, CE=2.304, LP=0.0000000256, AT=0.006]Epoch 1/50:  19%|█▉        | 37/196 [00:50<02:24,  1.10it/s, Total=2.310, CE=2.304, LP=0.0000000256, AT=0.006][DEBUG] Difference between x_adv and x: 735543.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000243
+[DEBUG] Difference between logits_clean and logits_adv: 0.2995
+[DEBUG] Layer 'layer1': Feat Diff: 6732658.0000, NormVec Diff: 5399.0742, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.305254, LP: 0.0000000243, AT: 0.006621
+[DEBUG] Raw loss values: CE=2.305254, LP=0.0000000243, AT=0.006621
+Epoch 1/50:  19%|█▉        | 37/196 [00:51<02:24,  1.10it/s, Total=2.312, CE=2.305, LP=0.0000000243, AT=0.007]Epoch 1/50:  19%|█▉        | 38/196 [00:51<02:21,  1.11it/s, Total=2.312, CE=2.305, LP=0.0000000243, AT=0.007][DEBUG] Difference between x_adv and x: 713603.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000219
+[DEBUG] Difference between logits_clean and logits_adv: 0.2837
+[DEBUG] Layer 'layer1': Feat Diff: 6455074.5000, NormVec Diff: 5018.3003, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302414, LP: 0.0000000219, AT: 0.006023
+[DEBUG] Raw loss values: CE=2.302414, LP=0.0000000219, AT=0.006023
+Epoch 1/50:  19%|█▉        | 38/196 [00:52<02:21,  1.11it/s, Total=2.308, CE=2.302, LP=0.0000000219, AT=0.006]Epoch 1/50:  20%|█▉        | 39/196 [00:52<02:23,  1.10it/s, Total=2.308, CE=2.302, LP=0.0000000219, AT=0.006][DEBUG] Difference between x_adv and x: 725954.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000206
+[DEBUG] Difference between logits_clean and logits_adv: 0.2753
+[DEBUG] Layer 'layer1': Feat Diff: 6457731.5000, NormVec Diff: 4995.7324, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302164, LP: 0.0000000206, AT: 0.005932
+[DEBUG] Raw loss values: CE=2.302164, LP=0.0000000206, AT=0.005932
+Epoch 1/50:  20%|█▉        | 39/196 [00:53<02:23,  1.10it/s, Total=2.308, CE=2.302, LP=0.0000000206, AT=0.006]Epoch 1/50:  20%|██        | 40/196 [00:53<02:20,  1.11it/s, Total=2.308, CE=2.302, LP=0.0000000206, AT=0.006][DEBUG] Difference between x_adv and x: 725533.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000185
+[DEBUG] Difference between logits_clean and logits_adv: 0.2603
+[DEBUG] Layer 'layer1': Feat Diff: 6354728.0000, NormVec Diff: 5048.2012, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.300804, LP: 0.0000000185, AT: 0.005931
+[DEBUG] Raw loss values: CE=2.300804, LP=0.0000000185, AT=0.005931
+Epoch 1/50:  20%|██        | 40/196 [00:54<02:20,  1.11it/s, Total=2.307, CE=2.301, LP=0.0000000185, AT=0.006]Epoch 1/50:  21%|██        | 41/196 [00:54<02:19,  1.11it/s, Total=2.307, CE=2.301, LP=0.0000000185, AT=0.006][DEBUG] Difference between x_adv and x: 726651.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000167
+[DEBUG] Difference between logits_clean and logits_adv: 0.2485
+[DEBUG] Layer 'layer1': Feat Diff: 6317242.0000, NormVec Diff: 5056.2104, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303211, LP: 0.0000000167, AT: 0.005970
+[DEBUG] Raw loss values: CE=2.303211, LP=0.0000000167, AT=0.005970
+Epoch 1/50:  21%|██        | 41/196 [00:55<02:19,  1.11it/s, Total=2.309, CE=2.303, LP=0.0000000167, AT=0.006]Epoch 1/50:  21%|██▏       | 42/196 [00:55<02:20,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000167, AT=0.006][DEBUG] Difference between x_adv and x: 739894.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000155
+[DEBUG] Difference between logits_clean and logits_adv: 0.2399
+[DEBUG] Layer 'layer1': Feat Diff: 6365769.5000, NormVec Diff: 5311.9766, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302054, LP: 0.0000000155, AT: 0.006204
+[DEBUG] Raw loss values: CE=2.302054, LP=0.0000000155, AT=0.006204
+Epoch 1/50:  21%|██▏       | 42/196 [00:56<02:20,  1.10it/s, Total=2.308, CE=2.302, LP=0.0000000155, AT=0.006]Epoch 1/50:  22%|██▏       | 43/196 [00:56<02:17,  1.11it/s, Total=2.308, CE=2.302, LP=0.0000000155, AT=0.006][DEBUG] Difference between x_adv and x: 725996.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000134
+[DEBUG] Difference between logits_clean and logits_adv: 0.2200
+[DEBUG] Layer 'layer1': Feat Diff: 6158169.5000, NormVec Diff: 5204.9121, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304166, LP: 0.0000000134, AT: 0.005903
+[DEBUG] Raw loss values: CE=2.304166, LP=0.0000000134, AT=0.005903
+Epoch 1/50:  22%|██▏       | 43/196 [00:57<02:17,  1.11it/s, Total=2.310, CE=2.304, LP=0.0000000134, AT=0.006]Epoch 1/50:  22%|██▏       | 44/196 [00:57<02:15,  1.12it/s, Total=2.310, CE=2.304, LP=0.0000000134, AT=0.006][DEBUG] Difference between x_adv and x: 740787.6875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000121
+[DEBUG] Difference between logits_clean and logits_adv: 0.2077
+[DEBUG] Layer 'layer1': Feat Diff: 6184512.0000, NormVec Diff: 5237.4629, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303720, LP: 0.0000000121, AT: 0.006283
+[DEBUG] Raw loss values: CE=2.303720, LP=0.0000000121, AT=0.006283
+Epoch 1/50:  22%|██▏       | 44/196 [00:58<02:15,  1.12it/s, Total=2.310, CE=2.304, LP=0.0000000121, AT=0.006]Epoch 1/50:  23%|██▎       | 45/196 [00:58<02:17,  1.10it/s, Total=2.310, CE=2.304, LP=0.0000000121, AT=0.006][DEBUG] Difference between x_adv and x: 721196.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000103
+[DEBUG] Difference between logits_clean and logits_adv: 0.1914
+[DEBUG] Layer 'layer1': Feat Diff: 5939483.0000, NormVec Diff: 4949.1289, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304341, LP: 0.0000000103, AT: 0.005532
+[DEBUG] Raw loss values: CE=2.304341, LP=0.0000000103, AT=0.005532
+Epoch 1/50:  23%|██▎       | 45/196 [00:58<02:17,  1.10it/s, Total=2.310, CE=2.304, LP=0.0000000103, AT=0.006]Epoch 1/50:  23%|██▎       | 46/196 [00:58<02:15,  1.11it/s, Total=2.310, CE=2.304, LP=0.0000000103, AT=0.006][DEBUG] Difference between x_adv and x: 724827.3125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000091
+[DEBUG] Difference between logits_clean and logits_adv: 0.1798
+[DEBUG] Layer 'layer1': Feat Diff: 5912916.0000, NormVec Diff: 5206.0356, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302998, LP: 0.0000000091, AT: 0.006152
+[DEBUG] Raw loss values: CE=2.302998, LP=0.0000000091, AT=0.006152
+Epoch 1/50:  23%|██▎       | 46/196 [00:59<02:15,  1.11it/s, Total=2.309, CE=2.303, LP=0.0000000091, AT=0.006]Epoch 1/50:  24%|██▍       | 47/196 [00:59<02:12,  1.12it/s, Total=2.309, CE=2.303, LP=0.0000000091, AT=0.006][DEBUG] Difference between x_adv and x: 718014.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000072
+[DEBUG] Difference between logits_clean and logits_adv: 0.1626
+[DEBUG] Layer 'layer1': Feat Diff: 5782414.5000, NormVec Diff: 5327.8882, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.299431, LP: 0.0000000072, AT: 0.006085
+[DEBUG] Raw loss values: CE=2.299431, LP=0.0000000072, AT=0.006085
+Epoch 1/50:  24%|██▍       | 47/196 [01:00<02:12,  1.12it/s, Total=2.306, CE=2.299, LP=0.0000000072, AT=0.006]Epoch 1/50:  24%|██▍       | 48/196 [01:00<02:13,  1.11it/s, Total=2.306, CE=2.299, LP=0.0000000072, AT=0.006][DEBUG] Difference between x_adv and x: 711627.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000062
+[DEBUG] Difference between logits_clean and logits_adv: 0.1522
+[DEBUG] Layer 'layer1': Feat Diff: 5669118.0000, NormVec Diff: 5173.1255, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303510, LP: 0.0000000062, AT: 0.005964
+[DEBUG] Raw loss values: CE=2.303510, LP=0.0000000062, AT=0.005964
+Epoch 1/50:  24%|██▍       | 48/196 [01:01<02:13,  1.11it/s, Total=2.309, CE=2.304, LP=0.0000000062, AT=0.006]Epoch 1/50:  25%|██▌       | 49/196 [01:01<02:13,  1.10it/s, Total=2.309, CE=2.304, LP=0.0000000062, AT=0.006][DEBUG] Difference between x_adv and x: 730220.5625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000059
+[DEBUG] Difference between logits_clean and logits_adv: 0.1486
+[DEBUG] Layer 'layer1': Feat Diff: 5762558.5000, NormVec Diff: 5000.5400, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303310, LP: 0.0000000059, AT: 0.005565
+[DEBUG] Raw loss values: CE=2.303310, LP=0.0000000059, AT=0.005565
+Epoch 1/50:  25%|██▌       | 49/196 [01:02<02:13,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000059, AT=0.006]Epoch 1/50:  26%|██▌       | 50/196 [01:02<02:10,  1.12it/s, Total=2.309, CE=2.303, LP=0.0000000059, AT=0.006][DEBUG] Difference between x_adv and x: 708296.3125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000049
+[DEBUG] Difference between logits_clean and logits_adv: 0.1340
+[DEBUG] Layer 'layer1': Feat Diff: 5524870.5000, NormVec Diff: 5115.7549, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302428, LP: 0.0000000049, AT: 0.005888
+[DEBUG] Raw loss values: CE=2.302428, LP=0.0000000049, AT=0.005888
+Epoch 1/50:  26%|██▌       | 50/196 [01:03<02:10,  1.12it/s, Total=2.308, CE=2.302, LP=0.0000000049, AT=0.006]Epoch 1/50:  26%|██▌       | 51/196 [01:03<02:09,  1.12it/s, Total=2.308, CE=2.302, LP=0.0000000049, AT=0.006][DEBUG] Difference between x_adv and x: 733471.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000046
+[DEBUG] Difference between logits_clean and logits_adv: 0.1288
+[DEBUG] Layer 'layer1': Feat Diff: 5606340.0000, NormVec Diff: 5345.2046, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.305156, LP: 0.0000000046, AT: 0.006244
+[DEBUG] Raw loss values: CE=2.305156, LP=0.0000000046, AT=0.006244
+Epoch 1/50:  26%|██▌       | 51/196 [01:04<02:09,  1.12it/s, Total=2.311, CE=2.305, LP=0.0000000046, AT=0.006]Epoch 1/50:  27%|██▋       | 52/196 [01:04<02:10,  1.10it/s, Total=2.311, CE=2.305, LP=0.0000000046, AT=0.006][DEBUG] Difference between x_adv and x: 728732.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000041
+[DEBUG] Difference between logits_clean and logits_adv: 0.1187
+[DEBUG] Layer 'layer1': Feat Diff: 5530273.0000, NormVec Diff: 5078.2373, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301755, LP: 0.0000000041, AT: 0.005329
+[DEBUG] Raw loss values: CE=2.301755, LP=0.0000000041, AT=0.005329
+Epoch 1/50:  27%|██▋       | 52/196 [01:05<02:10,  1.10it/s, Total=2.307, CE=2.302, LP=0.0000000041, AT=0.005]Epoch 1/50:  27%|██▋       | 53/196 [01:05<02:08,  1.11it/s, Total=2.307, CE=2.302, LP=0.0000000041, AT=0.005][DEBUG] Difference between x_adv and x: 706872.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000032
+[DEBUG] Difference between logits_clean and logits_adv: 0.1012
+[DEBUG] Layer 'layer1': Feat Diff: 5327281.0000, NormVec Diff: 5159.8770, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.305146, LP: 0.0000000032, AT: 0.005651
+[DEBUG] Raw loss values: CE=2.305146, LP=0.0000000032, AT=0.005651
+Epoch 1/50:  27%|██▋       | 53/196 [01:06<02:08,  1.11it/s, Total=2.311, CE=2.305, LP=0.0000000032, AT=0.006]Epoch 1/50:  28%|██▊       | 54/196 [01:06<02:06,  1.12it/s, Total=2.311, CE=2.305, LP=0.0000000032, AT=0.006][DEBUG] Difference between x_adv and x: 737136.0625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000029
+[DEBUG] Difference between logits_clean and logits_adv: 0.0964
+[DEBUG] Layer 'layer1': Feat Diff: 5454855.0000, NormVec Diff: 5080.7852, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304676, LP: 0.0000000029, AT: 0.005545
+[DEBUG] Raw loss values: CE=2.304676, LP=0.0000000029, AT=0.005545
+Epoch 1/50:  28%|██▊       | 54/196 [01:07<02:06,  1.12it/s, Total=2.310, CE=2.305, LP=0.0000000029, AT=0.006]Epoch 1/50:  28%|██▊       | 55/196 [01:07<02:08,  1.10it/s, Total=2.310, CE=2.305, LP=0.0000000029, AT=0.006][DEBUG] Difference between x_adv and x: 718779.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000025
+[DEBUG] Difference between logits_clean and logits_adv: 0.0892
+[DEBUG] Layer 'layer1': Feat Diff: 5269403.0000, NormVec Diff: 5070.9014, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303785, LP: 0.0000000025, AT: 0.005357
+[DEBUG] Raw loss values: CE=2.303785, LP=0.0000000025, AT=0.005357
+Epoch 1/50:  28%|██▊       | 55/196 [01:07<02:08,  1.10it/s, Total=2.309, CE=2.304, LP=0.0000000025, AT=0.005]Epoch 1/50:  29%|██▊       | 56/196 [01:07<02:06,  1.11it/s, Total=2.309, CE=2.304, LP=0.0000000025, AT=0.005][DEBUG] Difference between x_adv and x: 725442.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000024
+[DEBUG] Difference between logits_clean and logits_adv: 0.0890
+[DEBUG] Layer 'layer1': Feat Diff: 5258065.0000, NormVec Diff: 5300.5332, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303500, LP: 0.0000000024, AT: 0.005845
+[DEBUG] Raw loss values: CE=2.303500, LP=0.0000000024, AT=0.005845
+Epoch 1/50:  29%|██▊       | 56/196 [01:08<02:06,  1.11it/s, Total=2.309, CE=2.303, LP=0.0000000024, AT=0.006]Epoch 1/50:  29%|██▉       | 57/196 [01:08<02:04,  1.12it/s, Total=2.309, CE=2.303, LP=0.0000000024, AT=0.006][DEBUG] Difference between x_adv and x: 723412.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000021
+[DEBUG] Difference between logits_clean and logits_adv: 0.0807
+[DEBUG] Layer 'layer1': Feat Diff: 5171391.0000, NormVec Diff: 5199.4883, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.305003, LP: 0.0000000021, AT: 0.005529
+[DEBUG] Raw loss values: CE=2.305003, LP=0.0000000021, AT=0.005529
+Epoch 1/50:  29%|██▉       | 57/196 [01:09<02:04,  1.12it/s, Total=2.311, CE=2.305, LP=0.0000000021, AT=0.006]Epoch 1/50:  30%|██▉       | 58/196 [01:09<02:04,  1.11it/s, Total=2.311, CE=2.305, LP=0.0000000021, AT=0.006][DEBUG] Difference between x_adv and x: 736061.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000019
+[DEBUG] Difference between logits_clean and logits_adv: 0.0770
+[DEBUG] Layer 'layer1': Feat Diff: 5223549.0000, NormVec Diff: 5225.2451, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302209, LP: 0.0000000019, AT: 0.005671
+[DEBUG] Raw loss values: CE=2.302209, LP=0.0000000019, AT=0.005671
+Epoch 1/50:  30%|██▉       | 58/196 [01:10<02:04,  1.11it/s, Total=2.308, CE=2.302, LP=0.0000000019, AT=0.006]Epoch 1/50:  30%|███       | 59/196 [01:10<02:04,  1.10it/s, Total=2.308, CE=2.302, LP=0.0000000019, AT=0.006][DEBUG] Difference between x_adv and x: 708928.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000016
+[DEBUG] Difference between logits_clean and logits_adv: 0.0697
+[DEBUG] Layer 'layer1': Feat Diff: 4941703.0000, NormVec Diff: 5232.8555, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303187, LP: 0.0000000016, AT: 0.005577
+[DEBUG] Raw loss values: CE=2.303187, LP=0.0000000016, AT=0.005577
+Epoch 1/50:  30%|███       | 59/196 [01:11<02:04,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000016, AT=0.006]Epoch 1/50:  31%|███       | 60/196 [01:11<02:02,  1.11it/s, Total=2.309, CE=2.303, LP=0.0000000016, AT=0.006][DEBUG] Difference between x_adv and x: 714646.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000014
+[DEBUG] Difference between logits_clean and logits_adv: 0.0667
+[DEBUG] Layer 'layer1': Feat Diff: 4949841.0000, NormVec Diff: 4983.8955, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302950, LP: 0.0000000014, AT: 0.004998
+[DEBUG] Raw loss values: CE=2.302950, LP=0.0000000014, AT=0.004998
+Epoch 1/50:  31%|███       | 60/196 [01:12<02:02,  1.11it/s, Total=2.308, CE=2.303, LP=0.0000000014, AT=0.005]Epoch 1/50:  31%|███       | 61/196 [01:12<02:02,  1.10it/s, Total=2.308, CE=2.303, LP=0.0000000014, AT=0.005][DEBUG] Difference between x_adv and x: 722279.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000013
+[DEBUG] Difference between logits_clean and logits_adv: 0.0629
+[DEBUG] Layer 'layer1': Feat Diff: 4937784.0000, NormVec Diff: 5228.2979, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302453, LP: 0.0000000013, AT: 0.005425
+[DEBUG] Raw loss values: CE=2.302453, LP=0.0000000013, AT=0.005425
+Epoch 1/50:  31%|███       | 61/196 [01:13<02:02,  1.10it/s, Total=2.308, CE=2.302, LP=0.0000000013, AT=0.005]Epoch 1/50:  32%|███▏      | 62/196 [01:13<02:00,  1.11it/s, Total=2.308, CE=2.302, LP=0.0000000013, AT=0.005][DEBUG] Difference between x_adv and x: 716663.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000010
+[DEBUG] Difference between logits_clean and logits_adv: 0.0576
+[DEBUG] Layer 'layer1': Feat Diff: 4853659.0000, NormVec Diff: 5197.0967, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304026, LP: 0.0000000010, AT: 0.005437
+[DEBUG] Raw loss values: CE=2.304026, LP=0.0000000010, AT=0.005437
+Epoch 1/50:  32%|███▏      | 62/196 [01:14<02:00,  1.11it/s, Total=2.309, CE=2.304, LP=0.0000000010, AT=0.005]Epoch 1/50:  32%|███▏      | 63/196 [01:14<01:58,  1.12it/s, Total=2.309, CE=2.304, LP=0.0000000010, AT=0.005][DEBUG] Difference between x_adv and x: 736805.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000009
+[DEBUG] Difference between logits_clean and logits_adv: 0.0538
+[DEBUG] Layer 'layer1': Feat Diff: 4923906.0000, NormVec Diff: 5215.5928, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304471, LP: 0.0000000009, AT: 0.005294
+[DEBUG] Raw loss values: CE=2.304471, LP=0.0000000009, AT=0.005294
+Epoch 1/50:  32%|███▏      | 63/196 [01:15<01:58,  1.12it/s, Total=2.310, CE=2.304, LP=0.0000000009, AT=0.005]Epoch 1/50:  33%|███▎      | 64/196 [01:15<01:58,  1.11it/s, Total=2.310, CE=2.304, LP=0.0000000009, AT=0.005][DEBUG] Difference between x_adv and x: 716723.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000007
+[DEBUG] Difference between logits_clean and logits_adv: 0.0484
+[DEBUG] Layer 'layer1': Feat Diff: 4769937.0000, NormVec Diff: 5208.0698, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301529, LP: 0.0000000007, AT: 0.005272
+[DEBUG] Raw loss values: CE=2.301529, LP=0.0000000007, AT=0.005272
+Epoch 1/50:  33%|███▎      | 64/196 [01:16<01:58,  1.11it/s, Total=2.307, CE=2.302, LP=0.0000000007, AT=0.005]Epoch 1/50:  33%|███▎      | 65/196 [01:16<01:58,  1.11it/s, Total=2.307, CE=2.302, LP=0.0000000007, AT=0.005][DEBUG] Difference between x_adv and x: 699015.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000006
+[DEBUG] Difference between logits_clean and logits_adv: 0.0435
+[DEBUG] Layer 'layer1': Feat Diff: 4581718.0000, NormVec Diff: 5150.2378, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301704, LP: 0.0000000006, AT: 0.005047
+[DEBUG] Raw loss values: CE=2.301704, LP=0.0000000006, AT=0.005047
+Epoch 1/50:  33%|███▎      | 65/196 [01:16<01:58,  1.11it/s, Total=2.307, CE=2.302, LP=0.0000000006, AT=0.005]Epoch 1/50:  34%|███▎      | 66/196 [01:16<01:56,  1.12it/s, Total=2.307, CE=2.302, LP=0.0000000006, AT=0.005][DEBUG] Difference between x_adv and x: 713985.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000005
+[DEBUG] Difference between logits_clean and logits_adv: 0.0396
+[DEBUG] Layer 'layer1': Feat Diff: 4648746.0000, NormVec Diff: 5319.3564, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304590, LP: 0.0000000005, AT: 0.005196
+[DEBUG] Raw loss values: CE=2.304590, LP=0.0000000005, AT=0.005196
+Epoch 1/50:  34%|███▎      | 66/196 [01:17<01:56,  1.12it/s, Total=2.310, CE=2.305, LP=0.0000000005, AT=0.005]Epoch 1/50:  34%|███▍      | 67/196 [01:17<01:54,  1.12it/s, Total=2.310, CE=2.305, LP=0.0000000005, AT=0.005][DEBUG] Difference between x_adv and x: 720365.5625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000004
+[DEBUG] Difference between logits_clean and logits_adv: 0.0374
+[DEBUG] Layer 'layer1': Feat Diff: 4593661.0000, NormVec Diff: 5151.8174, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301740, LP: 0.0000000004, AT: 0.005143
+[DEBUG] Raw loss values: CE=2.301740, LP=0.0000000004, AT=0.005143
+Epoch 1/50:  34%|███▍      | 67/196 [01:18<01:54,  1.12it/s, Total=2.307, CE=2.302, LP=0.0000000004, AT=0.005]Epoch 1/50:  35%|███▍      | 68/196 [01:18<01:56,  1.10it/s, Total=2.307, CE=2.302, LP=0.0000000004, AT=0.005][DEBUG] Difference between x_adv and x: 733121.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000004
+[DEBUG] Difference between logits_clean and logits_adv: 0.0365
+[DEBUG] Layer 'layer1': Feat Diff: 4666909.0000, NormVec Diff: 5309.7344, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303488, LP: 0.0000000004, AT: 0.005299
+[DEBUG] Raw loss values: CE=2.303488, LP=0.0000000004, AT=0.005299
+Epoch 1/50:  35%|███▍      | 68/196 [01:19<01:56,  1.10it/s, Total=2.309, CE=2.303, LP=0.0000000004, AT=0.005]Epoch 1/50:  35%|███▌      | 69/196 [01:19<01:54,  1.11it/s, Total=2.309, CE=2.303, LP=0.0000000004, AT=0.005][DEBUG] Difference between x_adv and x: 706358.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000003
+[DEBUG] Difference between logits_clean and logits_adv: 0.0325
+[DEBUG] Layer 'layer1': Feat Diff: 4431944.0000, NormVec Diff: 5445.7603, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303599, LP: 0.0000000003, AT: 0.005627
+[DEBUG] Raw loss values: CE=2.303599, LP=0.0000000003, AT=0.005627
+Epoch 1/50:  35%|███▌      | 69/196 [01:20<01:54,  1.11it/s, Total=2.309, CE=2.304, LP=0.0000000003, AT=0.006]Epoch 1/50:  36%|███▌      | 70/196 [01:20<01:53,  1.11it/s, Total=2.309, CE=2.304, LP=0.0000000003, AT=0.006][DEBUG] Difference between x_adv and x: 747828.6875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000003
+[DEBUG] Difference between logits_clean and logits_adv: 0.0329
+[DEBUG] Layer 'layer1': Feat Diff: 4631164.0000, NormVec Diff: 5318.8535, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302369, LP: 0.0000000003, AT: 0.005164
+[DEBUG] Raw loss values: CE=2.302369, LP=0.0000000003, AT=0.005164
+Epoch 1/50:  36%|███▌      | 70/196 [01:21<01:53,  1.11it/s, Total=2.308, CE=2.302, LP=0.0000000003, AT=0.005]Epoch 1/50:  36%|███▌      | 71/196 [01:21<01:53,  1.10it/s, Total=2.308, CE=2.302, LP=0.0000000003, AT=0.005][DEBUG] Difference between x_adv and x: 734612.4375
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000003
+[DEBUG] Difference between logits_clean and logits_adv: 0.0308
+[DEBUG] Layer 'layer1': Feat Diff: 4497678.5000, NormVec Diff: 5272.9912, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303264, LP: 0.0000000003, AT: 0.005165
+[DEBUG] Raw loss values: CE=2.303264, LP=0.0000000003, AT=0.005165
+Epoch 1/50:  36%|███▌      | 71/196 [01:22<01:53,  1.10it/s, Total=2.308, CE=2.303, LP=0.0000000003, AT=0.005]Epoch 1/50:  37%|███▋      | 72/196 [01:22<01:51,  1.11it/s, Total=2.308, CE=2.303, LP=0.0000000003, AT=0.005][DEBUG] Difference between x_adv and x: 735514.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000003
+[DEBUG] Difference between logits_clean and logits_adv: 0.0294
+[DEBUG] Layer 'layer1': Feat Diff: 4462461.5000, NormVec Diff: 5398.3115, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301346, LP: 0.0000000003, AT: 0.005217
+[DEBUG] Raw loss values: CE=2.301346, LP=0.0000000003, AT=0.005217
+Epoch 1/50:  37%|███▋      | 72/196 [01:23<01:51,  1.11it/s, Total=2.307, CE=2.301, LP=0.0000000003, AT=0.005]Epoch 1/50:  37%|███▋      | 73/196 [01:23<01:52,  1.10it/s, Total=2.307, CE=2.301, LP=0.0000000003, AT=0.005][DEBUG] Difference between x_adv and x: 732193.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000002
+[DEBUG] Difference between logits_clean and logits_adv: 0.0280
+[DEBUG] Layer 'layer1': Feat Diff: 4410840.0000, NormVec Diff: 5263.2388, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303973, LP: 0.0000000002, AT: 0.004970
+[DEBUG] Raw loss values: CE=2.303973, LP=0.0000000002, AT=0.004970
+Epoch 1/50:  37%|███▋      | 73/196 [01:24<01:52,  1.10it/s, Total=2.309, CE=2.304, LP=0.0000000002, AT=0.005]Epoch 1/50:  38%|███▊      | 74/196 [01:24<01:50,  1.11it/s, Total=2.309, CE=2.304, LP=0.0000000002, AT=0.005][DEBUG] Difference between x_adv and x: 733117.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000002
+[DEBUG] Difference between logits_clean and logits_adv: 0.0262
+[DEBUG] Layer 'layer1': Feat Diff: 4346882.5000, NormVec Diff: 5288.1504, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303349, LP: 0.0000000002, AT: 0.004987
+[DEBUG] Raw loss values: CE=2.303349, LP=0.0000000002, AT=0.004987
+Epoch 1/50:  38%|███▊      | 74/196 [01:25<01:50,  1.11it/s, Total=2.308, CE=2.303, LP=0.0000000002, AT=0.005]Epoch 1/50:  38%|███▊      | 75/196 [01:25<01:48,  1.12it/s, Total=2.308, CE=2.303, LP=0.0000000002, AT=0.005][DEBUG] Difference between x_adv and x: 727402.0625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000002
+[DEBUG] Difference between logits_clean and logits_adv: 0.0236
+[DEBUG] Layer 'layer1': Feat Diff: 4280035.0000, NormVec Diff: 5192.8384, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302034, LP: 0.0000000002, AT: 0.004841
+[DEBUG] Raw loss values: CE=2.302034, LP=0.0000000002, AT=0.004841
+Epoch 1/50:  38%|███▊      | 75/196 [01:26<01:48,  1.12it/s, Total=2.307, CE=2.302, LP=0.0000000002, AT=0.005]Epoch 1/50:  39%|███▉      | 76/196 [01:26<01:49,  1.10it/s, Total=2.307, CE=2.302, LP=0.0000000002, AT=0.005][DEBUG] Difference between x_adv and x: 735836.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000002
+[DEBUG] Difference between logits_clean and logits_adv: 0.0223
+[DEBUG] Layer 'layer1': Feat Diff: 4297549.0000, NormVec Diff: 5321.1631, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301874, LP: 0.0000000002, AT: 0.004871
+[DEBUG] Raw loss values: CE=2.301874, LP=0.0000000002, AT=0.004871
+Epoch 1/50:  39%|███▉      | 76/196 [01:26<01:49,  1.10it/s, Total=2.307, CE=2.302, LP=0.0000000002, AT=0.005]Epoch 1/50:  39%|███▉      | 77/196 [01:26<01:46,  1.11it/s, Total=2.307, CE=2.302, LP=0.0000000002, AT=0.005][DEBUG] Difference between x_adv and x: 707087.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0205
+[DEBUG] Layer 'layer1': Feat Diff: 4095590.7500, NormVec Diff: 5162.1162, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.300892, LP: 0.0000000001, AT: 0.004573
+[DEBUG] Raw loss values: CE=2.300892, LP=0.0000000001, AT=0.004573
+Epoch 1/50:  39%|███▉      | 77/196 [01:27<01:46,  1.11it/s, Total=2.305, CE=2.301, LP=0.0000000001, AT=0.005]Epoch 1/50:  40%|███▉      | 78/196 [01:27<01:45,  1.12it/s, Total=2.305, CE=2.301, LP=0.0000000001, AT=0.005][DEBUG] Difference between x_adv and x: 737395.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0199
+[DEBUG] Layer 'layer1': Feat Diff: 4213080.0000, NormVec Diff: 5299.2764, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302944, LP: 0.0000000001, AT: 0.004729
+[DEBUG] Raw loss values: CE=2.302944, LP=0.0000000001, AT=0.004729
+Epoch 1/50:  40%|███▉      | 78/196 [01:28<01:45,  1.12it/s, Total=2.308, CE=2.303, LP=0.0000000001, AT=0.005]Epoch 1/50:  40%|████      | 79/196 [01:28<01:43,  1.13it/s, Total=2.308, CE=2.303, LP=0.0000000001, AT=0.005][DEBUG] Difference between x_adv and x: 703843.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0175
+[DEBUG] Layer 'layer1': Feat Diff: 3996183.5000, NormVec Diff: 5087.6670, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303311, LP: 0.0000000001, AT: 0.004581
+[DEBUG] Raw loss values: CE=2.303311, LP=0.0000000001, AT=0.004581
+Epoch 1/50:  40%|████      | 79/196 [01:29<01:43,  1.13it/s, Total=2.308, CE=2.303, LP=0.0000000001, AT=0.005]Epoch 1/50:  41%|████      | 80/196 [01:29<01:45,  1.10it/s, Total=2.308, CE=2.303, LP=0.0000000001, AT=0.005][DEBUG] Difference between x_adv and x: 739388.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0177
+[DEBUG] Layer 'layer1': Feat Diff: 4143731.0000, NormVec Diff: 5310.0674, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303586, LP: 0.0000000001, AT: 0.004695
+[DEBUG] Raw loss values: CE=2.303586, LP=0.0000000001, AT=0.004695
+Epoch 1/50:  41%|████      | 80/196 [01:30<01:45,  1.10it/s, Total=2.308, CE=2.304, LP=0.0000000001, AT=0.005]Epoch 1/50:  41%|████▏     | 81/196 [01:30<01:43,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000001, AT=0.005][DEBUG] Difference between x_adv and x: 744044.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0164
+[DEBUG] Layer 'layer1': Feat Diff: 4115352.0000, NormVec Diff: 5310.7812, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.299158, LP: 0.0000000001, AT: 0.004714
+[DEBUG] Raw loss values: CE=2.299158, LP=0.0000000001, AT=0.004714
+Epoch 1/50:  41%|████▏     | 81/196 [01:31<01:43,  1.11it/s, Total=2.304, CE=2.299, LP=0.0000000001, AT=0.005]Epoch 1/50:  42%|████▏     | 82/196 [01:31<01:42,  1.11it/s, Total=2.304, CE=2.299, LP=0.0000000001, AT=0.005][DEBUG] Difference between x_adv and x: 740238.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0157
+[DEBUG] Layer 'layer1': Feat Diff: 4065091.0000, NormVec Diff: 5345.8345, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303653, LP: 0.0000000001, AT: 0.004722
+[DEBUG] Raw loss values: CE=2.303653, LP=0.0000000001, AT=0.004722
+Epoch 1/50:  42%|████▏     | 82/196 [01:32<01:42,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000001, AT=0.005]Epoch 1/50:  42%|████▏     | 83/196 [01:32<01:42,  1.10it/s, Total=2.308, CE=2.304, LP=0.0000000001, AT=0.005][DEBUG] Difference between x_adv and x: 704647.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0142
+[DEBUG] Layer 'layer1': Feat Diff: 3854584.7500, NormVec Diff: 5120.0635, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302526, LP: 0.0000000001, AT: 0.004315
+[DEBUG] Raw loss values: CE=2.302526, LP=0.0000000001, AT=0.004315
+Epoch 1/50:  42%|████▏     | 83/196 [01:33<01:42,  1.10it/s, Total=2.307, CE=2.303, LP=0.0000000001, AT=0.004]Epoch 1/50:  43%|████▎     | 84/196 [01:33<01:40,  1.12it/s, Total=2.307, CE=2.303, LP=0.0000000001, AT=0.004][DEBUG] Difference between x_adv and x: 706192.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000001
+[DEBUG] Difference between logits_clean and logits_adv: 0.0131
+[DEBUG] Layer 'layer1': Feat Diff: 3814741.0000, NormVec Diff: 5228.8325, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302366, LP: 0.0000000001, AT: 0.004481
+[DEBUG] Raw loss values: CE=2.302366, LP=0.0000000001, AT=0.004481
+Epoch 1/50:  43%|████▎     | 84/196 [01:34<01:40,  1.12it/s, Total=2.307, CE=2.302, LP=0.0000000001, AT=0.004]Epoch 1/50:  43%|████▎     | 85/196 [01:34<01:38,  1.12it/s, Total=2.307, CE=2.302, LP=0.0000000001, AT=0.004][DEBUG] Difference between x_adv and x: 713758.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0125
+[DEBUG] Layer 'layer1': Feat Diff: 3822039.5000, NormVec Diff: 5202.1289, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303769, LP: 0.0000000000, AT: 0.004457
+[DEBUG] Raw loss values: CE=2.303769, LP=0.0000000000, AT=0.004457
+Epoch 1/50:  43%|████▎     | 85/196 [01:34<01:38,  1.12it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  44%|████▍     | 86/196 [01:34<01:39,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 712973.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0117
+[DEBUG] Layer 'layer1': Feat Diff: 3771232.5000, NormVec Diff: 4961.0771, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302939, LP: 0.0000000000, AT: 0.004058
+[DEBUG] Raw loss values: CE=2.302939, LP=0.0000000000, AT=0.004058
+Epoch 1/50:  44%|████▍     | 86/196 [01:35<01:39,  1.11it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  44%|████▍     | 87/196 [01:35<01:38,  1.11it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 700532.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0110
+[DEBUG] Layer 'layer1': Feat Diff: 3682741.0000, NormVec Diff: 5276.8633, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.307108, LP: 0.0000000000, AT: 0.004585
+[DEBUG] Raw loss values: CE=2.307108, LP=0.0000000000, AT=0.004585
+Epoch 1/50:  44%|████▍     | 87/196 [01:36<01:38,  1.11it/s, Total=2.312, CE=2.307, LP=0.0000000000, AT=0.005]Epoch 1/50:  45%|████▍     | 88/196 [01:36<01:36,  1.12it/s, Total=2.312, CE=2.307, LP=0.0000000000, AT=0.005][DEBUG] Difference between x_adv and x: 686823.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0102
+[DEBUG] Layer 'layer1': Feat Diff: 3576941.0000, NormVec Diff: 5183.9502, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302054, LP: 0.0000000000, AT: 0.004386
+[DEBUG] Raw loss values: CE=2.302054, LP=0.0000000000, AT=0.004386
+Epoch 1/50:  45%|████▍     | 88/196 [01:37<01:36,  1.12it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  45%|████▌     | 89/196 [01:37<01:35,  1.12it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 720705.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0102
+[DEBUG] Layer 'layer1': Feat Diff: 3698652.5000, NormVec Diff: 5268.9854, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302037, LP: 0.0000000000, AT: 0.004338
+[DEBUG] Raw loss values: CE=2.302037, LP=0.0000000000, AT=0.004338
+Epoch 1/50:  45%|████▌     | 89/196 [01:38<01:35,  1.12it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  46%|████▌     | 90/196 [01:38<01:36,  1.10it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 716758.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0094
+[DEBUG] Layer 'layer1': Feat Diff: 3661090.2500, NormVec Diff: 5243.1787, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301722, LP: 0.0000000000, AT: 0.004274
+[DEBUG] Raw loss values: CE=2.301722, LP=0.0000000000, AT=0.004274
+Epoch 1/50:  46%|████▌     | 90/196 [01:39<01:36,  1.10it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  46%|████▋     | 91/196 [01:39<01:34,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 737283.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0091
+[DEBUG] Layer 'layer1': Feat Diff: 3710134.2500, NormVec Diff: 5414.9961, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301339, LP: 0.0000000000, AT: 0.004528
+[DEBUG] Raw loss values: CE=2.301339, LP=0.0000000000, AT=0.004528
+Epoch 1/50:  46%|████▋     | 91/196 [01:40<01:34,  1.11it/s, Total=2.306, CE=2.301, LP=0.0000000000, AT=0.005]Epoch 1/50:  47%|████▋     | 92/196 [01:40<01:35,  1.09it/s, Total=2.306, CE=2.301, LP=0.0000000000, AT=0.005][DEBUG] Difference between x_adv and x: 675991.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0079
+[DEBUG] Layer 'layer1': Feat Diff: 3399023.0000, NormVec Diff: 4991.0098, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304383, LP: 0.0000000000, AT: 0.003942
+[DEBUG] Raw loss values: CE=2.304383, LP=0.0000000000, AT=0.003942
+Epoch 1/50:  47%|████▋     | 92/196 [01:41<01:35,  1.09it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  47%|████▋     | 93/196 [01:41<01:32,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 727866.0625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0081
+[DEBUG] Layer 'layer1': Feat Diff: 3608850.7500, NormVec Diff: 5461.2505, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.298787, LP: 0.0000000000, AT: 0.004499
+[DEBUG] Raw loss values: CE=2.298787, LP=0.0000000000, AT=0.004499
+Epoch 1/50:  47%|████▋     | 93/196 [01:42<01:32,  1.11it/s, Total=2.303, CE=2.299, LP=0.0000000000, AT=0.004]Epoch 1/50:  48%|████▊     | 94/196 [01:42<01:31,  1.12it/s, Total=2.303, CE=2.299, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 711148.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0076
+[DEBUG] Layer 'layer1': Feat Diff: 3502147.0000, NormVec Diff: 5330.4346, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301987, LP: 0.0000000000, AT: 0.004344
+[DEBUG] Raw loss values: CE=2.301987, LP=0.0000000000, AT=0.004344
+Epoch 1/50:  48%|████▊     | 94/196 [01:43<01:31,  1.12it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  48%|████▊     | 95/196 [01:43<01:32,  1.10it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 724108.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0074
+[DEBUG] Layer 'layer1': Feat Diff: 3512154.2500, NormVec Diff: 5407.4990, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304226, LP: 0.0000000000, AT: 0.004336
+[DEBUG] Raw loss values: CE=2.304226, LP=0.0000000000, AT=0.004336
+Epoch 1/50:  48%|████▊     | 95/196 [01:44<01:32,  1.10it/s, Total=2.309, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  49%|████▉     | 96/196 [01:44<01:30,  1.11it/s, Total=2.309, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 714177.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0068
+[DEBUG] Layer 'layer1': Feat Diff: 3439088.5000, NormVec Diff: 5301.5078, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301684, LP: 0.0000000000, AT: 0.004133
+[DEBUG] Raw loss values: CE=2.301684, LP=0.0000000000, AT=0.004133
+Epoch 1/50:  49%|████▉     | 96/196 [01:44<01:30,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  49%|████▉     | 97/196 [01:44<01:29,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 709132.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0064
+[DEBUG] Layer 'layer1': Feat Diff: 3383604.5000, NormVec Diff: 5186.4736, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303800, LP: 0.0000000000, AT: 0.004040
+[DEBUG] Raw loss values: CE=2.303800, LP=0.0000000000, AT=0.004040
+Epoch 1/50:  49%|████▉     | 97/196 [01:45<01:29,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  50%|█████     | 98/196 [01:45<01:29,  1.10it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 738127.4375
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0063
+[DEBUG] Layer 'layer1': Feat Diff: 3496102.7500, NormVec Diff: 5333.7480, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304906, LP: 0.0000000000, AT: 0.004089
+[DEBUG] Raw loss values: CE=2.304906, LP=0.0000000000, AT=0.004089
+Epoch 1/50:  50%|█████     | 98/196 [01:46<01:29,  1.10it/s, Total=2.309, CE=2.305, LP=0.0000000000, AT=0.004]Epoch 1/50:  51%|█████     | 99/196 [01:46<01:27,  1.11it/s, Total=2.309, CE=2.305, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 698354.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0057
+[DEBUG] Layer 'layer1': Feat Diff: 3290099.0000, NormVec Diff: 5335.4727, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303938, LP: 0.0000000000, AT: 0.004195
+[DEBUG] Raw loss values: CE=2.303938, LP=0.0000000000, AT=0.004195
+Epoch 1/50:  51%|█████     | 99/196 [01:47<01:27,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  51%|█████     | 100/196 [01:47<01:28,  1.09it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 697912.0625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0053
+[DEBUG] Layer 'layer1': Feat Diff: 3252216.5000, NormVec Diff: 5225.1533, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301592, LP: 0.0000000000, AT: 0.004016
+[DEBUG] Raw loss values: CE=2.301592, LP=0.0000000000, AT=0.004016
+Epoch 1/50:  51%|█████     | 100/196 [01:48<01:28,  1.09it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  52%|█████▏    | 101/196 [01:48<01:25,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 719835.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0052
+[DEBUG] Layer 'layer1': Feat Diff: 3328605.0000, NormVec Diff: 5355.9131, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304085, LP: 0.0000000000, AT: 0.004101
+[DEBUG] Raw loss values: CE=2.304085, LP=0.0000000000, AT=0.004101
+Epoch 1/50:  52%|█████▏    | 101/196 [01:49<01:25,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  52%|█████▏    | 102/196 [01:49<01:24,  1.12it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 736683.1875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0051
+[DEBUG] Layer 'layer1': Feat Diff: 3374171.0000, NormVec Diff: 5437.3882, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304212, LP: 0.0000000000, AT: 0.004207
+[DEBUG] Raw loss values: CE=2.304212, LP=0.0000000000, AT=0.004207
+Epoch 1/50:  52%|█████▏    | 102/196 [01:50<01:24,  1.12it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  53%|█████▎    | 103/196 [01:50<01:22,  1.12it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 723440.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0047
+[DEBUG] Layer 'layer1': Feat Diff: 3278766.5000, NormVec Diff: 5218.2856, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302376, LP: 0.0000000000, AT: 0.003941
+[DEBUG] Raw loss values: CE=2.302376, LP=0.0000000000, AT=0.003941
+Epoch 1/50:  53%|█████▎    | 103/196 [01:51<01:22,  1.12it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  53%|█████▎    | 104/196 [01:51<01:24,  1.09it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 719192.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0045
+[DEBUG] Layer 'layer1': Feat Diff: 3235194.0000, NormVec Diff: 5289.8022, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303628, LP: 0.0000000000, AT: 0.003911
+[DEBUG] Raw loss values: CE=2.303628, LP=0.0000000000, AT=0.003911
+Epoch 1/50:  53%|█████▎    | 104/196 [01:52<01:24,  1.09it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  54%|█████▎    | 105/196 [01:52<01:21,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 719711.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0042
+[DEBUG] Layer 'layer1': Feat Diff: 3190875.7500, NormVec Diff: 5174.7129, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.300865, LP: 0.0000000000, AT: 0.003845
+[DEBUG] Raw loss values: CE=2.300865, LP=0.0000000000, AT=0.003845
+Epoch 1/50:  54%|█████▎    | 105/196 [01:53<01:21,  1.11it/s, Total=2.305, CE=2.301, LP=0.0000000000, AT=0.004]Epoch 1/50:  54%|█████▍    | 106/196 [01:53<01:20,  1.12it/s, Total=2.305, CE=2.301, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 717548.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0039
+[DEBUG] Layer 'layer1': Feat Diff: 3178634.5000, NormVec Diff: 5238.7935, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302838, LP: 0.0000000000, AT: 0.003836
+[DEBUG] Raw loss values: CE=2.302838, LP=0.0000000000, AT=0.003836
+Epoch 1/50:  54%|█████▍    | 106/196 [01:53<01:20,  1.12it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  55%|█████▍    | 107/196 [01:53<01:20,  1.10it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 722369.8125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0036
+[DEBUG] Layer 'layer1': Feat Diff: 3171878.0000, NormVec Diff: 5471.2588, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303532, LP: 0.0000000000, AT: 0.004015
+[DEBUG] Raw loss values: CE=2.303532, LP=0.0000000000, AT=0.004015
+Epoch 1/50:  55%|█████▍    | 107/196 [01:54<01:20,  1.10it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  55%|█████▌    | 108/196 [01:54<01:19,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 713156.1875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0033
+[DEBUG] Layer 'layer1': Feat Diff: 3092165.0000, NormVec Diff: 5506.0278, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301450, LP: 0.0000000000, AT: 0.004086
+[DEBUG] Raw loss values: CE=2.301450, LP=0.0000000000, AT=0.004086
+Epoch 1/50:  55%|█████▌    | 108/196 [01:55<01:19,  1.11it/s, Total=2.306, CE=2.301, LP=0.0000000000, AT=0.004]Epoch 1/50:  56%|█████▌    | 109/196 [01:55<01:17,  1.12it/s, Total=2.306, CE=2.301, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 722273.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0030
+[DEBUG] Layer 'layer1': Feat Diff: 3115317.5000, NormVec Diff: 5289.9253, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.306149, LP: 0.0000000000, AT: 0.003803
+[DEBUG] Raw loss values: CE=2.306149, LP=0.0000000000, AT=0.003803
+Epoch 1/50:  56%|█████▌    | 109/196 [01:56<01:17,  1.12it/s, Total=2.310, CE=2.306, LP=0.0000000000, AT=0.004]Epoch 1/50:  56%|█████▌    | 110/196 [01:56<01:17,  1.11it/s, Total=2.310, CE=2.306, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 714958.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0028
+[DEBUG] Layer 'layer1': Feat Diff: 3055205.5000, NormVec Diff: 5341.7783, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302135, LP: 0.0000000000, AT: 0.003923
+[DEBUG] Raw loss values: CE=2.302135, LP=0.0000000000, AT=0.003923
+Epoch 1/50:  56%|█████▌    | 110/196 [01:57<01:17,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  57%|█████▋    | 111/196 [01:57<01:16,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 716363.1875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0027
+[DEBUG] Layer 'layer1': Feat Diff: 3044408.5000, NormVec Diff: 5162.5645, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302768, LP: 0.0000000000, AT: 0.003627
+[DEBUG] Raw loss values: CE=2.302768, LP=0.0000000000, AT=0.003627
+Epoch 1/50:  57%|█████▋    | 111/196 [01:58<01:16,  1.11it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  57%|█████▋    | 112/196 [01:58<01:15,  1.12it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 723735.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0025
+[DEBUG] Layer 'layer1': Feat Diff: 3050805.0000, NormVec Diff: 5526.0303, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302596, LP: 0.0000000000, AT: 0.003962
+[DEBUG] Raw loss values: CE=2.302596, LP=0.0000000000, AT=0.003962
+Epoch 1/50:  57%|█████▋    | 112/196 [01:59<01:15,  1.12it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  58%|█████▊    | 113/196 [01:59<01:15,  1.10it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 707091.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0023
+[DEBUG] Layer 'layer1': Feat Diff: 2966234.5000, NormVec Diff: 5566.4365, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.305619, LP: 0.0000000000, AT: 0.004008
+[DEBUG] Raw loss values: CE=2.305619, LP=0.0000000000, AT=0.004008
+Epoch 1/50:  58%|█████▊    | 113/196 [02:00<01:15,  1.10it/s, Total=2.310, CE=2.306, LP=0.0000000000, AT=0.004]Epoch 1/50:  58%|█████▊    | 114/196 [02:00<01:14,  1.10it/s, Total=2.310, CE=2.306, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 709559.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0022
+[DEBUG] Layer 'layer1': Feat Diff: 2928112.5000, NormVec Diff: 5272.1519, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304526, LP: 0.0000000000, AT: 0.003646
+[DEBUG] Raw loss values: CE=2.304526, LP=0.0000000000, AT=0.003646
+Epoch 1/50:  58%|█████▊    | 114/196 [02:01<01:14,  1.10it/s, Total=2.308, CE=2.305, LP=0.0000000000, AT=0.004]Epoch 1/50:  59%|█████▊    | 115/196 [02:01<01:12,  1.12it/s, Total=2.308, CE=2.305, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 748221.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0022
+[DEBUG] Layer 'layer1': Feat Diff: 3081470.2500, NormVec Diff: 5665.3315, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304438, LP: 0.0000000000, AT: 0.004016
+[DEBUG] Raw loss values: CE=2.304438, LP=0.0000000000, AT=0.004016
+Epoch 1/50:  59%|█████▊    | 115/196 [02:02<01:12,  1.12it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  59%|█████▉    | 116/196 [02:02<01:13,  1.09it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 710176.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0018
+[DEBUG] Layer 'layer1': Feat Diff: 2898479.7500, NormVec Diff: 5352.8594, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304104, LP: 0.0000000000, AT: 0.003675
+[DEBUG] Raw loss values: CE=2.304104, LP=0.0000000000, AT=0.003675
+Epoch 1/50:  59%|█████▉    | 116/196 [02:02<01:13,  1.09it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  60%|█████▉    | 117/196 [02:02<01:11,  1.10it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 723309.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0019
+[DEBUG] Layer 'layer1': Feat Diff: 2923767.5000, NormVec Diff: 5491.2715, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303318, LP: 0.0000000000, AT: 0.003854
+[DEBUG] Raw loss values: CE=2.303318, LP=0.0000000000, AT=0.003854
+Epoch 1/50:  60%|█████▉    | 117/196 [02:03<01:11,  1.10it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  60%|██████    | 118/196 [02:03<01:09,  1.12it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 722195.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0017
+[DEBUG] Layer 'layer1': Feat Diff: 2894139.2500, NormVec Diff: 5488.7637, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303327, LP: 0.0000000000, AT: 0.003794
+[DEBUG] Raw loss values: CE=2.303327, LP=0.0000000000, AT=0.003794
+Epoch 1/50:  60%|██████    | 118/196 [02:04<01:09,  1.12it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  61%|██████    | 119/196 [02:04<01:10,  1.10it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 735738.0625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0017
+[DEBUG] Layer 'layer1': Feat Diff: 2921945.2500, NormVec Diff: 5542.4282, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303588, LP: 0.0000000000, AT: 0.003789
+[DEBUG] Raw loss values: CE=2.303588, LP=0.0000000000, AT=0.003789
+Epoch 1/50:  61%|██████    | 119/196 [02:05<01:10,  1.10it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  61%|██████    | 120/196 [02:05<01:08,  1.11it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 695091.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0016
+[DEBUG] Layer 'layer1': Feat Diff: 2751871.0000, NormVec Diff: 5279.8633, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303943, LP: 0.0000000000, AT: 0.003590
+[DEBUG] Raw loss values: CE=2.303943, LP=0.0000000000, AT=0.003590
+Epoch 1/50:  61%|██████    | 120/196 [02:06<01:08,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  62%|██████▏   | 121/196 [02:06<01:07,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 711929.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0015
+[DEBUG] Layer 'layer1': Feat Diff: 2802885.5000, NormVec Diff: 5504.9023, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301386, LP: 0.0000000000, AT: 0.003707
+[DEBUG] Raw loss values: CE=2.301386, LP=0.0000000000, AT=0.003707
+Epoch 1/50:  62%|██████▏   | 121/196 [02:07<01:07,  1.11it/s, Total=2.305, CE=2.301, LP=0.0000000000, AT=0.004]Epoch 1/50:  62%|██████▏   | 122/196 [02:07<01:07,  1.10it/s, Total=2.305, CE=2.301, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 727996.1875
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0014
+[DEBUG] Layer 'layer1': Feat Diff: 2816993.5000, NormVec Diff: 5444.8423, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301793, LP: 0.0000000000, AT: 0.003696
+[DEBUG] Raw loss values: CE=2.301793, LP=0.0000000000, AT=0.003696
+Epoch 1/50:  62%|██████▏   | 122/196 [02:08<01:07,  1.10it/s, Total=2.305, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  63%|██████▎   | 123/196 [02:08<01:05,  1.11it/s, Total=2.305, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 713201.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0014
+[DEBUG] Layer 'layer1': Feat Diff: 2752110.0000, NormVec Diff: 5273.7212, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303756, LP: 0.0000000000, AT: 0.003553
+[DEBUG] Raw loss values: CE=2.303756, LP=0.0000000000, AT=0.003553
+Epoch 1/50:  63%|██████▎   | 123/196 [02:09<01:05,  1.11it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  63%|██████▎   | 124/196 [02:09<01:04,  1.12it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 704706.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0013
+[DEBUG] Layer 'layer1': Feat Diff: 2701422.5000, NormVec Diff: 5400.2949, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303131, LP: 0.0000000000, AT: 0.003642
+[DEBUG] Raw loss values: CE=2.303131, LP=0.0000000000, AT=0.003642
+Epoch 1/50:  63%|██████▎   | 124/196 [02:10<01:04,  1.12it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  64%|██████▍   | 125/196 [02:10<01:04,  1.11it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 725049.1250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0013
+[DEBUG] Layer 'layer1': Feat Diff: 2763135.2500, NormVec Diff: 5468.6738, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303243, LP: 0.0000000000, AT: 0.003636
+[DEBUG] Raw loss values: CE=2.303243, LP=0.0000000000, AT=0.003636
+Epoch 1/50:  64%|██████▍   | 125/196 [02:11<01:04,  1.11it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  64%|██████▍   | 126/196 [02:11<01:02,  1.11it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 738799.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0011
+[DEBUG] Layer 'layer1': Feat Diff: 2783464.7500, NormVec Diff: 5573.7109, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302421, LP: 0.0000000000, AT: 0.003720
+[DEBUG] Raw loss values: CE=2.302421, LP=0.0000000000, AT=0.003720
+Epoch 1/50:  64%|██████▍   | 126/196 [02:11<01:02,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  65%|██████▍   | 127/196 [02:11<01:01,  1.13it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 722687.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0011
+[DEBUG] Layer 'layer1': Feat Diff: 2700751.2500, NormVec Diff: 5464.2046, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302577, LP: 0.0000000000, AT: 0.003620
+[DEBUG] Raw loss values: CE=2.302577, LP=0.0000000000, AT=0.003620
+Epoch 1/50:  65%|██████▍   | 127/196 [02:12<01:01,  1.13it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  65%|██████▌   | 128/196 [02:12<01:01,  1.11it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 711340.6250
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0011
+[DEBUG] Layer 'layer1': Feat Diff: 2659363.0000, NormVec Diff: 5616.4258, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303689, LP: 0.0000000000, AT: 0.003754
+[DEBUG] Raw loss values: CE=2.303689, LP=0.0000000000, AT=0.003754
+Epoch 1/50:  65%|██████▌   | 128/196 [02:13<01:01,  1.11it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  66%|██████▌   | 129/196 [02:13<01:00,  1.11it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 718177.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0010
+[DEBUG] Layer 'layer1': Feat Diff: 2655028.2500, NormVec Diff: 5722.9336, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303502, LP: 0.0000000000, AT: 0.003801
+[DEBUG] Raw loss values: CE=2.303502, LP=0.0000000000, AT=0.003801
+Epoch 1/50:  66%|██████▌   | 129/196 [02:14<01:00,  1.11it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  66%|██████▋   | 130/196 [02:14<00:58,  1.12it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 719802.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0009
+[DEBUG] Layer 'layer1': Feat Diff: 2635397.5000, NormVec Diff: 5362.4131, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302008, LP: 0.0000000000, AT: 0.003460
+[DEBUG] Raw loss values: CE=2.302008, LP=0.0000000000, AT=0.003460
+Epoch 1/50:  66%|██████▋   | 130/196 [02:15<00:58,  1.12it/s, Total=2.305, CE=2.302, LP=0.0000000000, AT=0.003]Epoch 1/50:  67%|██████▋   | 131/196 [02:15<00:58,  1.11it/s, Total=2.305, CE=2.302, LP=0.0000000000, AT=0.003][DEBUG] Difference between x_adv and x: 703565.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0009
+[DEBUG] Layer 'layer1': Feat Diff: 2555397.5000, NormVec Diff: 5409.2646, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302360, LP: 0.0000000000, AT: 0.003567
+[DEBUG] Raw loss values: CE=2.302360, LP=0.0000000000, AT=0.003567
+Epoch 1/50:  67%|██████▋   | 131/196 [02:16<00:58,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  67%|██████▋   | 132/196 [02:16<00:57,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 714354.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0008
+[DEBUG] Layer 'layer1': Feat Diff: 2584383.0000, NormVec Diff: 5544.5186, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302810, LP: 0.0000000000, AT: 0.003548
+[DEBUG] Raw loss values: CE=2.302810, LP=0.0000000000, AT=0.003548
+Epoch 1/50:  67%|██████▋   | 132/196 [02:17<00:57,  1.11it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.004]Epoch 1/50:  68%|██████▊   | 133/196 [02:17<00:56,  1.12it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 733852.4375
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0008
+[DEBUG] Layer 'layer1': Feat Diff: 2620732.0000, NormVec Diff: 5526.0479, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303555, LP: 0.0000000000, AT: 0.003551
+[DEBUG] Raw loss values: CE=2.303555, LP=0.0000000000, AT=0.003551
+Epoch 1/50:  68%|██████▊   | 133/196 [02:18<00:56,  1.12it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  68%|██████▊   | 134/196 [02:18<00:56,  1.10it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 747714.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0009
+[DEBUG] Layer 'layer1': Feat Diff: 2660597.5000, NormVec Diff: 5648.6582, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304438, LP: 0.0000000000, AT: 0.003623
+[DEBUG] Raw loss values: CE=2.304438, LP=0.0000000000, AT=0.003623
+Epoch 1/50:  68%|██████▊   | 134/196 [02:19<00:56,  1.10it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  69%|██████▉   | 135/196 [02:19<00:55,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 733474.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0008
+[DEBUG] Layer 'layer1': Feat Diff: 2578832.7500, NormVec Diff: 5372.5391, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.300879, LP: 0.0000000000, AT: 0.003415
+[DEBUG] Raw loss values: CE=2.300879, LP=0.0000000000, AT=0.003415
+Epoch 1/50:  69%|██████▉   | 135/196 [02:20<00:55,  1.11it/s, Total=2.304, CE=2.301, LP=0.0000000000, AT=0.003]Epoch 1/50:  69%|██████▉   | 136/196 [02:20<00:53,  1.12it/s, Total=2.304, CE=2.301, LP=0.0000000000, AT=0.003][DEBUG] Difference between x_adv and x: 715856.3125
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0007
+[DEBUG] Layer 'layer1': Feat Diff: 2504179.7500, NormVec Diff: 5394.3398, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303210, LP: 0.0000000000, AT: 0.003444
+[DEBUG] Raw loss values: CE=2.303210, LP=0.0000000000, AT=0.003444
+Epoch 1/50:  69%|██████▉   | 136/196 [02:20<00:53,  1.12it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.003]Epoch 1/50:  70%|██████▉   | 137/196 [02:20<00:53,  1.10it/s, Total=2.307, CE=2.303, LP=0.0000000000, AT=0.003][DEBUG] Difference between x_adv and x: 735149.8750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0006
+[DEBUG] Layer 'layer1': Feat Diff: 2548470.5000, NormVec Diff: 5515.8750, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304087, LP: 0.0000000000, AT: 0.003520
+[DEBUG] Raw loss values: CE=2.304087, LP=0.0000000000, AT=0.003520
+Epoch 1/50:  70%|██████▉   | 137/196 [02:21<00:53,  1.10it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  70%|███████   | 138/196 [02:21<00:52,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 717226.5000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0007
+[DEBUG] Layer 'layer1': Feat Diff: 2481522.5000, NormVec Diff: 5683.3076, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304368, LP: 0.0000000000, AT: 0.003709
+[DEBUG] Raw loss values: CE=2.304368, LP=0.0000000000, AT=0.003709
+Epoch 1/50:  70%|███████   | 138/196 [02:22<00:52,  1.11it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004]Epoch 1/50:  71%|███████   | 139/196 [02:22<00:50,  1.12it/s, Total=2.308, CE=2.304, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 721344.9375
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0005
+[DEBUG] Layer 'layer1': Feat Diff: 2471690.0000, NormVec Diff: 5571.1582, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304725, LP: 0.0000000000, AT: 0.003550
+[DEBUG] Raw loss values: CE=2.304725, LP=0.0000000000, AT=0.003550
+Epoch 1/50:  71%|███████   | 139/196 [02:23<00:50,  1.12it/s, Total=2.308, CE=2.305, LP=0.0000000000, AT=0.004]Epoch 1/50:  71%|███████▏  | 140/196 [02:23<00:50,  1.10it/s, Total=2.308, CE=2.305, LP=0.0000000000, AT=0.004][DEBUG] Difference between x_adv and x: 738631.3750
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0005
+[DEBUG] Layer 'layer1': Feat Diff: 2508653.7500, NormVec Diff: 5348.8408, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.301932, LP: 0.0000000000, AT: 0.003317
+[DEBUG] Raw loss values: CE=2.301932, LP=0.0000000000, AT=0.003317
+Epoch 1/50:  71%|███████▏  | 140/196 [02:24<00:50,  1.10it/s, Total=2.305, CE=2.302, LP=0.0000000000, AT=0.003]Epoch 1/50:  72%|███████▏  | 141/196 [02:24<00:49,  1.11it/s, Total=2.305, CE=2.302, LP=0.0000000000, AT=0.003][DEBUG] Difference between x_adv and x: 711215.5625
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0005
+[DEBUG] Layer 'layer1': Feat Diff: 2401807.5000, NormVec Diff: 5420.9272, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302835, LP: 0.0000000000, AT: 0.003418
+[DEBUG] Raw loss values: CE=2.302835, LP=0.0000000000, AT=0.003418
+Epoch 1/50:  72%|███████▏  | 141/196 [02:25<00:49,  1.11it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.003]Epoch 1/50:  72%|███████▏  | 142/196 [02:25<00:48,  1.12it/s, Total=2.306, CE=2.303, LP=0.0000000000, AT=0.003][DEBUG] Difference between x_adv and x: 696042.0000
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0005
+[DEBUG] Layer 'layer1': Feat Diff: 2336551.0000, NormVec Diff: 5306.2031, Current AT Loss: 0.0006
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.304682, LP: 0.0000000000, AT: 0.003295
+[DEBUG] Raw loss values: CE=2.304682, LP=0.0000000000, AT=0.003295
+Epoch 1/50:  72%|███████▏  | 142/196 [02:26<00:48,  1.12it/s, Total=2.308, CE=2.305, LP=0.0000000000, AT=0.003]Epoch 1/50:  73%|███████▎  | 143/196 [02:26<00:48,  1.10it/s, Total=2.308, CE=2.305, LP=0.0000000000, AT=0.003][DEBUG] Difference between x_adv and x: 728060.7500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0004
+[DEBUG] Layer 'layer1': Feat Diff: 2417355.0000, NormVec Diff: 5567.8774, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.303891, LP: 0.0000000000, AT: 0.003486
+[DEBUG] Raw loss values: CE=2.303891, LP=0.0000000000, AT=0.003486
+Epoch 1/50:  73%|███████▎  | 143/196 [02:27<00:48,  1.10it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.003]Epoch 1/50:  73%|███████▎  | 144/196 [02:27<00:46,  1.11it/s, Total=2.307, CE=2.304, LP=0.0000000000, AT=0.003][DEBUG] Difference between x_adv and x: 706224.2500
+[DEBUG][compute_at_alp_loss] Calculated loss_alp: 0.0000000000
+[DEBUG] Difference between logits_clean and logits_adv: 0.0004
+[DEBUG] Layer 'layer1': Feat Diff: 2344384.2500, NormVec Diff: 5710.2764, Current AT Loss: 0.0007
+[DEBUG][compute_at_alp_loss] Returning losses - CE: 2.302085, LP: 0.0000000000, AT: 0.003579
+[DEBUG] Raw loss values: CE=2.302085, LP=0.0000000000, AT=0.003579
+Epoch 1/50:  73%|███████▎  | 144/196 [02:28<00:46,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  74%|███████▍  | 145/196 [02:28<00:45,  1.11it/s, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]Epoch 1/50:  74%|███████▍  | 145/196 [02:28<00:52,  1.03s/it, Total=2.306, CE=2.302, LP=0.0000000000, AT=0.004]
+Traceback (most recent call last):
+  File "realensemble.py", line 276, in <module>
+    total_loss, ce_loss, alp_loss, at_loss = compute_at_alp_loss(
+  File "/home/work/AIprogramming/Ai_proj/attentionlpt.py", line 151, in compute_at_alp_loss
+    diff = (x_adv - x).abs().sum().item()
+  File "/opt/conda/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 38489) is killed by signal: Terminated. 
